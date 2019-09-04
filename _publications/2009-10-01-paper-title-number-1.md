@@ -1,15 +1,15 @@
 ---
-title: "Paper Title Number 1"
+title: "Selection and validation of appropriate reference genes for real-time quantitative PCR analysis in <i>Momordica charantia</i>."
 collection: publications
 permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
+excerpt: 'This paper is about properly selecting the reference geens in Momordica charantia, a medicinal plant with bitter taste, for quantitative PCR analysis.'
+date: 2019-05-02
+venue: 'Phytochemistry'
+paperurl: 'http://hanfeng-lin.github.io/files/wang2019.pdf'
 citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 This paper is about the number 1. The number 2 is left for future work.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+[Download paper here](http://hanfeng-lin.github.io/files/wang2019.pdf)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+Recommended citation: Wang, Z., Xu, J., Liu, Y., Chen, J., Lin, H., Huang, Y., Bian, X., Zhao, Y. (2019). Selection and validation of appropriate reference genes for real-time quantitative PCR analysis in Momordica charantia. <i>Phytochemistry</i>, <b>164</b>, 1–11. doi:10.1016/j.phytochem.2019.04.010 
