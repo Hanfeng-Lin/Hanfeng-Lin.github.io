@@ -11,12 +11,12 @@ redirect_from:
 
 Education
 ======
-* China Pharmaceutical University (CPU), Nanjing, China   09/2016-06/2020</>
-  B.S. in Pharmacy (Biochemistry and Pharmacology)      GPA: 3.88/4.0
+* China Pharmaceutical University (CPU), Nanjing, China   09/2016-06/2020
+  * B.S. in Pharmacy (Biochemistry and Pharmacology)      GPA: 3.88/4.0
 * University of Strathclyde, Glasgow, UK (anticipated)    09/2019-06/2020
-  BSc in Biochemistry and Pharmacology
+  * BSc in Biochemistry and Pharmacology
 
-Research experience
+Research Experience
 ======
 * 06/2019-08/2019 IGEM: Blue Light Detecting Strain Based on Cas1-Cas2
   * Instructed by Dr. Yibei Xiao	
@@ -48,9 +48,10 @@ Instructed by Dr. Jiyang Xu
   * Provided some data and basis for the clinical application of sodium valproate
 
   
-Skills
+Lab Skills
 ======
-* Skill 1
+* Laboratory
+  * Western blot, PCR, Competence preparation, SDS-PAGE, Electrophoresis, Gene knockout, Plasmid transformation, Electrotransformation, Ultraviolet spectrophotometer
 * Skill 2
   * Sub-skill 2.1
   * Sub-skill 2.2
