@@ -2,7 +2,7 @@
 title: "Selection and validation of appropriate reference genes for real-time quantitative PCR analysis in <i>Momordica charantia</i>."
 collection: publications
 permalink: /publication/2019-05-02-paper-title-number-1
-excerpt: 'This paper is about properly selecting the reference geens in Momordica charantia, a medicinal plant with bitter taste, for quantitative PCR analysis.'
+excerpt: 'This paper is about properly selecting the reference genes in Momordica charantia, a medicinal plant with bitter taste, for quantitative PCR analysis.'
 date: 2019-05-02
 venue: 'Phytochemistry'
 paperurl: 'http://hanfeng-lin.github.io/files/wang2019.pdf'
