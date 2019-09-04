@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* China Pharmaceutical University (CPU), Nanjing, China   09/2016-06/2020
+* China Pharmaceutical University (CPU), Nanjing, China   09/2016-06/2020</>
   B.S. in Pharmacy (Biochemistry and Pharmacology)      GPA: 3.88/4.0
 * University of Strathclyde, Glasgow, UK (anticipated)    09/2019-06/2020
   BSc in Biochemistry and Pharmacology
