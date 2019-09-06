@@ -51,13 +51,25 @@ Instructed by Dr. Jiyang Xu
 Lab Skills
 ======
 * Laboratory
-  * Western blot, PCR, Competence preparation, SDS-PAGE, Electrophoresis, Gene knockout, Plasmid transformation, Electrotransformation, Ultraviolet spectrophotometer
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
+  * Western blot
+  * PCR, qPCR, touch down PCR
+  * Plasmid transformation (chemical & electric)
+  * Gene knockout (Red recombination)
+  * Protein purification - from DNA sequence to EP tube
+  * AKTA (Gel filtration & Ion exchanger)
+  * PAGE (SDS, Urea) and Gel Imaging Scanner
+* Software
+  * Snapgene
+  * BioEdit
+  * NCBI BLAST suite
+  * PyMOL
+  * ChemDraw
+* Statistic and Drawing
+  * Origin, SPSS, Graphpad
+  * Adobe Photoshop, Adobe Illustrator
+  * R
+  
+  
 Publications
 ======
   <ul>{% for post in site.publications %}
