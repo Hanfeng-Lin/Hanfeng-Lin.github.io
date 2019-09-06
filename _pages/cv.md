@@ -80,13 +80,13 @@ Publications
   
 HONOR & AWARD
 ======
-* The First-class Scholarship of Exploring World Plan                             06/2019
-* 2nd China Undergraduate Life Science Competition (CULSC) Third-prize	          11/2018
-* The Honorary Title of Triple-A student                                          09/2018  
-* National Scholarship		                                                        09/2018
-* The Honorary Title of Outstanding Volunteer                                  	  05/2018 
-* First-class Scholarship from CPU                                                03/2018
-* Model of Triple-A student-- the highest individual honor for students at CPU    12/2017       
+* 06/2019 The First-class Scholarship of Exploring World Plan                             
+* 11/2018 2nd China Undergraduate Life Science Competition (CULSC) Third-prize	          
+* 09/2018 The Honorary Title of Triple-A student                                            
+* 09/2018 National Scholarship		                                                        
+* 05/2018 The Honorary Title of Outstanding Volunteer                                  	   
+* 03/2018 First-class Scholarship from CPU                                                
+* 12/2017 Model of Triple-A student-- the highest individual honor for students at CPU           
 
 Extracurricular Activities
 ======
