@@ -18,31 +18,31 @@ Education
 
 Research Experience
 ======
-* 06/2019-08/2019 IGEM: Blue Light Detecting Strain Based on Cas1-Cas2
+* 06/2019-08/2019 <i>Investigator</i>, <b>IGEM: Blue Light Detecting Strain Based on Cas1-Cas2</b>
   * Instructed by Dr. Yibei Xiao	
   * Construct of the blue-light sensitizing protein (YF1, FixJ) on the plasmid and gene expression
   * Construct the promoter that can bind to the blue-light sensitizing protein on the upstream of plasmid Cas3. (Cas3 could inhibit the continuous expression of Cas1-Cas2 on another plasmid, thus inhibiting the space acquisition process of CRISPR array.)
   * Deduce the blue light exposure time and intensity of the strain through PCR amplifying CRISPR array.
 
-* 03/2019-09/2019 Identification of Benzyl Isoquinoline Alkaloids (BIA) Genes in Corydalis by Full-length Transcriptome Data Analysis	
+* 03/2019-09/2019 <i>Investigator</i>, <b>Identification of Benzyl Isoquinoline Alkaloids (BIA) Genes in Corydalis by Full-length Transcriptome Data Analysis</b>
   * Instructed by Dr. Yucheng Zhao 
   * Obtain the first full-length transcription group of Corydalis, analyze the related transcripts of enzymes and verified that all BIA -synthetic proteins in Corydalis root had their corresponding mRNA
   * Classify O-methyltransferase (OMT) protein family by constructing phylogenetic tree  
   * A first-author research paper under peer-review
   
-* 03/2019-08/2019 Biophysical Study on Proteins Related to CRISPR System and Their Activities	
+* 03/2019-08/2019 <i>Investigator</i>, <b>Biophysical Study on Proteins Related to CRISPR System and Their Activities	</b>
   * Instructed by Dr.Yibei Xiao
   * Construct the expression strains and purify key proteins Cas9, Cas1, Csn2 and Cas13a in CRISPR system 
   * Obtain RNA by in-vitro transcription of spacer cDNA sequences using purified T7 transcriptase, and research their binding and activity 
   * Analyze the structure of the complexes with biophysical methods (X-ray crystallography)
 
-* 05/2018-04/2019 Project leader, Effect of Tripeptidase Gene Knockout by Red Recombinant System on Glutathione Biosynthesis
+* 05/2018-04/2019 <i>Project leader</i>, <b>Effect of Tripeptidase Gene Knockout by Red Recombinant System on Glutathione Biosynthesis</b>
 Instructed by Dr. Jiyang Xu            
   * Constructed engineering bacteria pET28a-gsh I and pBAD24-gsh II, screened positive recombinant ions and knock out the tripeptidase gene by using Red recombination system 
   * Inhibited the expression of tripeptidase and GSH degradation, determined the content of GSH by alloxan method
   * Compared data of the glutathione production from the knockout strain and constructed strain, verified knocking out the tripeptidase gene could increase the GSH production
 
-* 09/2018-12/2018 Co-investigator, Effects of Sodium Valerate on Endothelial Stem Progenitor Cells in Rats with Uremic Heart Failure	
+* 09/2018-12/2018 <i>Co-investigator</i>, <b>Effects of Sodium Valerate on Endothelial Stem Progenitor Cells in Rats with Uremic Heart Failure	</b>
   * Worked with seniors to induced rat chronic renal failure (CRF) model by conducting nephrectomy 
   * Determined hemodynamics, in vitro vascular ring diastolic, renal index and cardiac index
   * Provided some data and basis for the clinical application of sodium valproate
@@ -93,13 +93,13 @@ HONOR & AWARD
 
 Extracurricular Activities
 ======
-* 09/2017-01/2018 Volunteer, Pharmacy of Nanjing First Hospital	                            
+* 09/2017-01/2018 <i>Volunteer</i>, Pharmacy of Nanjing First Hospital	                            
   * Helped to put drugs on shelves, operated Novartis drugs dispensing machine, and received incoming clients and guided them to queue up for medication  
 
-* 07/2017-08/2017 Volunteer, Clinical Pharmacy China 3.0--sponsored by Merck & Co., Inc. 	  
+* 07/2017-08/2017 <i>Volunteer</i>, Clinical Pharmacy China 3.0--sponsored by Merck & Co., Inc. 	  
   * Visited local pharmacies and conducted questionnaires with pharmacy staff and consumers, investigated on the present situation of pharmaceutical services provided by licensed pharmacists in social pharmacy	
 
-* 03/2017-05/2017 Volunteer, Jiangsu Development Summit		                                  
+* 03/2017-05/2017 <i>Volunteer</i>, Jiangsu Development Summit		                                  
   * Participated in volunteer training, gave introductions of the conference agenda and travel itinerary to the attendees 
 
 
