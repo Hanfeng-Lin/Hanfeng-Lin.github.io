@@ -70,7 +70,10 @@ Lab Skills
   * Origin, SPSS, Graphpad
   * Adobe Photoshop, Adobe Illustrator, MS Visio
   * R
-  
+* Language
+  * Chinese (Native)
+  * English (Fluent)
+  * Japanese (Moderate)
   
 Publications
 ======
@@ -90,13 +93,13 @@ HONOR & AWARD
 
 Extracurricular Activities
 ======
-* Volunteer, Pharmacy of Nanjing First Hospital	                            09/2017-01/2018
+* 09/2017-01/2018 Volunteer, Pharmacy of Nanjing First Hospital	                            
   * Helped to put drugs on shelves, operated Novartis drugs dispensing machine, and received incoming clients and guided them to queue up for medication  
 
-* Volunteer, Clinical Pharmacy China 3.0--sponsored by Merck & Co., Inc. 	  07/2017-08/2017
+* 07/2017-08/2017 Volunteer, Clinical Pharmacy China 3.0--sponsored by Merck & Co., Inc. 	  
   * Visited local pharmacies and conducted questionnaires with pharmacy staff and consumers, investigated on the present situation of pharmaceutical services provided by licensed pharmacists in social pharmacy	
 
-* Volunteer, Jiangsu Development Summit		                                  03/2017-05/2017
+* 03/2017-05/2017 Volunteer, Jiangsu Development Summit		                                  
   * Participated in volunteer training, gave introductions of the conference agenda and travel itinerary to the attendees 
 
 
