@@ -24,5 +24,5 @@ redirect_from:
  
 * To learn more about me, you can have a view of my CV page here, or download my resume here.
  
-* I like writing blogs to summarize the knowledge or record my interesting experiments. I like sharing and discussing things with others. Visit my Chinese blog here!
+* I like writing blogs to summarize the knowledge or record my interesting experiments. I like sharing and discussing things with others. Visit my Chinese blog <a href="https://weibo.com/5979426299/profile">here</a>!
   
