@@ -60,13 +60,15 @@ Lab Skills
   * PAGE (SDS, Urea) and Gel Imaging Scanner
 * Software
   * Snapgene
+  * Primer 5
   * BioEdit
   * NCBI BLAST suite
+  * MegaX
   * PyMOL
   * ChemDraw
 * Statistic and Drawing
   * Origin, SPSS, Graphpad
-  * Adobe Photoshop, Adobe Illustrator
+  * Adobe Photoshop, Adobe Illustrator, MS Visio
   * R
   
   
@@ -76,9 +78,26 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Teaching
+HONOR & AWARD
 ======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* The First-class Scholarship of Exploring World Plan                             06/2019
+* 2nd China Undergraduate Life Science Competition (CULSC) Third-prize	          11/2018
+* The Honorary Title of Triple-A student                                          09/2018  
+* National Scholarship		                                                        09/2018
+* The Honorary Title of Outstanding Volunteer                                  	  05/2018 
+* First-class Scholarship from CPU                                                03/2018
+* Model of Triple-A student-- the highest individual honor for students at CPU    12/2017       
+
+Extracurricular Activities
+======
+* Volunteer, Pharmacy of Nanjing First Hospital	                            09/2017-01/2018
+  * Helped to put drugs on shelves, operated Novartis drugs dispensing machine, and received incoming clients and guided them to queue up for medication  
+
+* Volunteer, Clinical Pharmacy China 3.0--sponsored by Merck & Co., Inc. 	  07/2017-08/2017
+  * Visited local pharmacies and conducted questionnaires with pharmacy staff and consumers, investigated on the present situation of pharmaceutical services provided by licensed pharmacists in social pharmacy	
+
+* Volunteer, Jiangsu Development Summit		                                  03/2017-05/2017
+  * Participated in volunteer training, gave introductions of the conference agenda and travel itinerary to the attendees 
+
+
   
