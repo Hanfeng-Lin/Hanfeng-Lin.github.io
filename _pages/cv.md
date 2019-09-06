@@ -60,7 +60,7 @@ Lab Skills
   * PAGE (SDS, Urea) and Gel Imaging Scanner
 * Software
   * Snapgene
-  * Primer 5
+  * Premiere Primer 5
   * BioEdit
   * NCBI BLAST suite
   * MegaX
@@ -96,10 +96,10 @@ Extracurricular Activities
 * 09/2017-01/2018 <i>Volunteer</i>, Pharmacy of Nanjing First Hospital	                            
   * Helped to put drugs on shelves, operated Novartis drugs dispensing machine, and received incoming clients and guided them to queue up for medication  
 
-* 07/2017-08/2017 <i>Volunteer</i>, Clinical Pharmacy China 3.0--sponsored by Merck & Co., Inc. 	  
+* 07/2017-08/2017 <i>Volunteer</i>, Clinical Pharmacy China 3.0--<i>sponsored by Merck & Co., Inc. 	 </i> 
   * Visited local pharmacies and conducted questionnaires with pharmacy staff and consumers, investigated on the present situation of pharmaceutical services provided by licensed pharmacists in social pharmacy	
 
-* 03/2017-05/2017 <i>Volunteer</i>, Jiangsu Development Summit		                                  
+* 03/2017-05/2017 <i>Volunteer</i>, 1st Jiangsu Development Summit		                                  
   * Participated in volunteer training, gave introductions of the conference agenda and travel itinerary to the attendees 
 
 
