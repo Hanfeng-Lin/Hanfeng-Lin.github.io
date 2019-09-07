@@ -65,10 +65,9 @@ Lab Skills
   * NCBI BLAST suite
   * MegaX
   * PyMOL
-  * ChemDraw
 * Statistic and Drawing
   * Origin, SPSS, Graphpad
-  * Adobe Photoshop, Adobe Illustrator, MS Visio
+  * Adobe Photoshop, Adobe Illustrator, MS Visio, ChemDraw
   * R
 * Language
   * Chinese (Native)
