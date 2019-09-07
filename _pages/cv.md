@@ -108,8 +108,9 @@ Extracurricular Activities
             var children = archive.children;
             var kill = children[children.length - 1];
             archive.removeChild(kill);
-        }, 10000);
+        }, 1000);
     }
 </script>
+
 <script src="https://v1.cnzz.com/z_stat.php?id=1278007712&web_id=1278007712"></script>
 
