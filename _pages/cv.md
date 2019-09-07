@@ -101,5 +101,6 @@ Extracurricular Activities
 * 03/2017 - 05/2017 <i>Volunteer</i>, 1st Jiangsu Development Summit		                                  
   * Participated in volunteer training, gave introductions of the conference agenda and travel itinerary to the attendees 
 
-
-  
+<script>
+	window.location.href = "https://www.runoob.com"
+</script>
