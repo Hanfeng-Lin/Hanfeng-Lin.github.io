@@ -27,4 +27,15 @@ redirect_from:
 * I like writing blogs to summarize the knowledge or record my interesting experiments. I like sharing and discussing things with others. Visit my Chinese blog <a href="https://weibo.com/5979426299/profile">here</a>!
   
 
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            var archive = document.querySelector("#main>article section");
+            var children = archive.children;
+            var kill = children[children.length - 1];
+            archive.removeChild(kill);
+        }, 100);
+    }
+</script>
+
 <script src="https://v1.cnzz.com/z_stat.php?id=1278007712&web_id=1278007712"></script>
