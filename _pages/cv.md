@@ -100,6 +100,16 @@ Extracurricular Activities
 
 * 03/2017 - 05/2017 <i>Volunteer</i>, 1st Jiangsu Development Summit		                                  
   * Participated in volunteer training, gave introductions of the conference agenda and travel itinerary to the attendees 
-
-<script src="https://v1.cnzz.com/z_stat.php?id=1278007712&web_id=1278007712">
+    
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            var archive = document.querySelector("#main>.archive");
+            var children = archive.children;
+            var kill = children[children.length - 1];
+            archive.removeChild(kill);
+        }, 10000);
+    }
 </script>
+<script src="https://v1.cnzz.com/z_stat.php?id=1278007712&web_id=1278007712"></script>
+
