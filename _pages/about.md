@@ -22,7 +22,7 @@ redirect_from:
  
 * My research interest is revealing the molecular interaction between protein and macromolecules (DNA, RNA) or small molecules (drug, endogenous ligand) via biophysic methods.
  
-* To learn more about me, you can have a view of my CV page <a href="https://hanfeng-lin.github.io/cv/">here</a>, or <a href="">download it</a> for a later glance.
+* To learn more about me, you can have a view of my CV page <a href="https://hanfeng-lin.github.io/cv/">here</a>, or <a href="https://hanfeng-lin.github.io/files/Hanfeng_Lin's_CV.pdf">download it</a> for a future view.
 
 
 <script>
