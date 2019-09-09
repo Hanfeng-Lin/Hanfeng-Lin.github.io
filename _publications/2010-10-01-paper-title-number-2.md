@@ -3,7 +3,7 @@ title: "Using Full-Length Transcriptome to Identify Benzylisoquinoline Alkaloid 
 collection: publications
 permalink: /publication/2010-10-01-paper-title-number-2.md
 excerpt: 'This paper used a combined method of transcriptomic and metabolic analysis in order to excavating the candidate genes participating in the benzylisoquinoline biosynthesis in <i>Corydalis yanhusuo</i>.'
-date: 2019
+date: 2019-12-31
 venue: 'Under review'
 paperurl: ''
 citation: ''
