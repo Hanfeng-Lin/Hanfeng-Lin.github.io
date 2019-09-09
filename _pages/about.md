@@ -27,7 +27,7 @@ redirect_from:
 
 
 <script>
-    document.ready = function () {
+    window.onload = function () {
         setTimeout(function () {
             var archive = document.querySelector("#main>article section");
             var children = archive.children;
