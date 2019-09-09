@@ -11,7 +11,7 @@ Xu, D. <sup>†</sup>, <b>Lin, H.</b> <sup>†</sup>, Zhang, K., Li, C., Zhao, X
 <sup>†</sup>: These authors contribute equally to this work.
 
 
-This paper used a combined method of transcriptomic and metabolic analysis in order to excavating the candidate genes participating in the benzylisoquinoline biosynthesis in <i>Corydalis yanhusuo</i>.'
+This paper used a combined method of transcriptomic and metabolomic analysis in order to excavating the candidate genes participating in the benzylisoquinoline biosynthesis in <i>Corydalis yanhusuo</i>.'
 ---
 <b>Abstract</b>
 
