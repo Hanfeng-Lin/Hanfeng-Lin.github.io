@@ -1,5 +1,5 @@
 ---
-title: "Using Full-Length Transcriptome to Identify Benzylisoquinoline Alkaloid Biosynthetic Genes in Corydalis yanhusuo."
+title: "Using Full-Length Transcriptome to Identify Benzylisoquinoline Alkaloid Biosynthetic Genes in <i>Corydalis yanhusuo</i>."
 collection: publications
 permalink: /publication/2019-transcriptome.md
 excerpt: 'This paper used a combined method of transcriptomic and metabolic analysis in order to excavating the candidate genes participating in the benzylisoquinoline biosynthesis in <i>Corydalis yanhusuo</i>.'
