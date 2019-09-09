@@ -23,5 +23,5 @@ Yuan-Hu, the dried tubers of Corydalis yanhusuo W.T. Wang, is a classic herb fre
             var tree = document.querySelector("#main>.archive article");
             var child = tree.children[1];
             tree.removeChild(child);
-        }
+        }()
   </script>
