@@ -2,7 +2,10 @@
 title: "Using Full-Length Transcriptome to Identify Benzylisoquinoline Alkaloid Biosynthetic Genes in <i>Corydalis yanhusuo</i>."
 collection: publications
 permalink: /publication/2019-12-31-paper-title-number-2
-excerpt: 'Xu, D. <sup>†</sup>, <b>Lin, H.</b> <sup>†</sup>, Zhang, K., Li, C., Zhao, X., Xu, J., Zhao, Y. Under view. 2019
+excerpt: 'Under review. 2019
+
+Xu, D. <sup>†</sup>, <b>Lin, H.</b> <sup>†</sup>, Zhang, K., Li, C., Zhao, X., Xu, J., Zhao, Y. 
+
 <sup>†</sup>: These authors contribute equally to this work.
 
 
