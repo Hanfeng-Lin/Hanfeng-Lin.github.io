@@ -13,7 +13,7 @@ redirect_from:
 * Hi, I am Hanfeng Lin
  
 * I am a 3+1 student of China Pharmaceutical University (CPU) and University of Strathclyde (UoS). My program in CPU is Bachelor of Science in Pharmacy and my major in UoS is Biochemistry and Pharmacology (Honours). 
-Currently, I am doing my graduation thesis supervised by Nigel J. Pyne about a novol way to activate S1P receptors and the downstream signalling. 
+Currently, I am doing my graduation thesis supervised by <a href="https://www.strath.ac.uk/staff/pynenigelprof/">Nigel J. Pyne</a> about a untraditional way to activate S1P receptors and the downstream signalling. 
  
 * I have systematically studied professional courses in Pharmacy and maintained top 1 in my class since freshman year, and I was awarded the “Triple-A Student” honor, the First-class Scholarships, and National Scholarship for many times. By actively engaging in lab researches and writing reports, I have also mastered a series of lab techniques (PCR, Western-blot, Cell culture, Protein purification, Transcriptomic analysis, etc), familiarized with statistics software (SPSS, Origin, Graphpad) and illustration (Photoshop, AI, R), and strengthened skill in literature review.
  
