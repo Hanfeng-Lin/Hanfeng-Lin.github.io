@@ -19,8 +19,9 @@ redirect_from:
 * I have systematically studied professional courses in Pharmacy and maintained top 1 in my class since freshman year, and I was awarded the “Triple-A Student” honor, the First-class Scholarships, and National Scholarship for many times. By actively engaging in lab researches and writing reports, I have also mastered a series of lab techniques (PCR, Western-blot, Cell culture, Protein purification, Transcriptomic analysis, etc), familiarized with statistics software (SPSS, Origin, Graphpad) and illustration (Photoshop, AI, R), and strengthened skill in literature review.
 
 
-<img src="https://hanfeng-lin.github.io/publications/Figure5.png">
- 
+<a href="https://hanfeng-lin.github.io/publications/">
+<img src="https://hanfeng-lin.github.io/publications/Figure5.png" title="A previous work on transcriptomic analysis, which is accomplished entirely on my own effort">
+ </a>
  
 * As a quick learner, I like to take a crack at new things in different fields and enjoy the feeling of gaining knowledge. Driven by great self-discipline and internal motivation, I am capable of learning independently. What is more, I am a considerate and open-minded person who is good at working as part of a team and dealing with diverse people.
  
