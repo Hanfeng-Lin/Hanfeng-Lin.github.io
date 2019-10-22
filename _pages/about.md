@@ -17,7 +17,11 @@ redirect_from:
 * Currently, I am doing my graduation thesis supervised by <a href="https://www.strath.ac.uk/staff/pynenigelprof/">Prof. Nigel J. Pyne</a> about an untraditional way to activate S1P receptors and the downstream signalling. 
  
 * I have systematically studied professional courses in Pharmacy and maintained top 1 in my class since freshman year, and I was awarded the “Triple-A Student” honor, the First-class Scholarships, and National Scholarship for many times. By actively engaging in lab researches and writing reports, I have also mastered a series of lab techniques (PCR, Western-blot, Cell culture, Protein purification, Transcriptomic analysis, etc), familiarized with statistics software (SPSS, Origin, Graphpad) and illustration (Photoshop, AI, R), and strengthened skill in literature review.
+
+
+<img src="https://hanfeng-lin.github.io/publications/Figure5.png">
  
+ 
 * As a quick learner, I like to take a crack at new things in different fields and enjoy the feeling of gaining knowledge. Driven by great self-discipline and internal motivation, I am capable of learning independently. What is more, I am a considerate and open-minded person who is good at working as part of a team and dealing with diverse people.
  
 * My research interest is revealing the molecular interaction between protein and macromolecules (DNA, RNA) or small molecules (drug, endogenous ligand) via biophysic methods.
