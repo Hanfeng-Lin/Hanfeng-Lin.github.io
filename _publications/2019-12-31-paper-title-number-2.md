@@ -13,7 +13,8 @@ Xu, D. <sup>†</sup>, <b>Lin, H.</b> <sup>†</sup>, Zhang, K., Li, C., Zhao, X
 
 This paper used a combined method of transcriptomic and metabolomic analysis in order to excavating the candidate genes participating in the benzylisoquinoline biosynthesis in <i>Corydalis yanhusuo</i>.
 
-<img src="images/Figure5.png">
+
+<img src="./images/Figure5.png">
 '
 ---
 Under review. 2019
