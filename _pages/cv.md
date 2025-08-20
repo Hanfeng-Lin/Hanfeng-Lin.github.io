@@ -11,16 +11,17 @@ redirect_from:
 
 # Hanfeng Lin
 *Baylor College of Medicine, Houston, Texas 77030, US*
+
 *hanfeng.lin@bcm.edu *
 
 ---
 
 ## EDUCATION
-* **Ph.D. in Chemical, Physical and Structural Biology** | Jan 2021 – est. 2025
+* **Ph.D. in Chemical, Physical and Structural Biology**  Jan 2021 – est. 2025
     * *Baylor College of Medicine, Houston, Texas, United States*
-* **BSc in Biochemistry and Pharmacology, First Class Honour Degree** | Sept 2019 - Jun 2020
+* **BSc in Biochemistry and Pharmacology, First Class Honour Degree**  Sept 2019 - Jun 2020
     * *University of Strathclyde, Glasgow, UK*
-* **B.S. in Pharmacy (Biochemistry and Pharmacology)** | Sept 2016 - Jun 2020
+* **B.S. in Pharmacy (Biochemistry and Pharmacology)**  Sept 2016 - Jun 2020
     * *China Pharmaceutical University, Nanjing, China*
     * GPA: 3.88 / 4.0
 
