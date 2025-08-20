@@ -2,13 +2,13 @@
 title: "Using Full-Length Transcriptome to Identify Benzylisoquinoline Alkaloid Biosynthetic Genes in <i>Corydalis yanhusuo</i>."
 collection: publications
 permalink: /publication/2019-12-31-paper-title-number-2
-excerpt: 'Under review. 2019
+excerpt: 'Published at Hortic Res. 2021 
 
 
-Xu, D. <sup>†</sup>, <b>Lin, H.</b> <sup>†</sup>, Zhang, K., Li, C., Zhao, X., Xu, J., Zhao, Y. 
+Xu D†, Lin H†, Zhang K, Li C, Zhao X, Xu J, Zhao Y.
 
 
-<sup>†</sup>: These authors contribute equally to this work.
+†: These authors contribute equally to this work.
 
 
 This paper used a combined method of transcriptomic and metabolomic analysis in order to excavating the candidate genes participating in the benzylisoquinoline biosynthesis in <i>Corydalis yanhusuo</i>.
@@ -17,13 +17,11 @@ This paper used a combined method of transcriptomic and metabolomic analysis in 
 <img src="Figure5.png">
 '
 ---
-Under review. 2019
+Published at Hortic Res. 2021 
 
+Xu D†, Lin H†, Zhang K, Li C, Zhao X, Xu J, Zhao Y.
 
-Xu, D. <sup>†</sup>, <b>Lin, H.</b> <sup>†</sup>, Zhang, K., Li, C., Zhao, X., Xu, J., Zhao, Y. 
-
-
-<sup>†</sup>: These authors contribute equally to this work.
+†: These authors contribute equally to this work.
 
 
 <b>Abstract</b>
