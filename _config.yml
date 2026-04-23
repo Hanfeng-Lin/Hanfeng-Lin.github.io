@@ -83,12 +83,12 @@ analytics:
 author:
   name             : "Hanfeng Lin"
   avatar           : "profile.png"
-  bio              : "3+1 undergraduate programme of China Pharmaceutical University & University of Strathclyde"
-  location         : "Glasgow, UK"
+  bio              : "Postdoctoral Associate at Baylor College of Medicine | Chemical Biology & Drug Discovery"
+  location         : "Houston, TX, US"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Hanfeng+Lin"
-  googlescholar    : 
-  email            : "hanfeng.lin.2016@uni.strath.ac.uk"
+  googlescholar    :
+  email            : "hanfeng.lin@bcm.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -97,13 +97,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : 
+  github           :
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "hanfeng-lin-89008923a"
   orcid            : 
   pinterest        :
   soundcloud       :

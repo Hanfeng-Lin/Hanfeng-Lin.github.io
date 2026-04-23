@@ -17,7 +17,7 @@ redirect_from:
 ---
 
 ## EDUCATION
-* **Ph.D. in Chemical, Physical and Structural Biology**  Jan 2021 – est. 2025
+* **Ph.D. in Chemical, Physical and Structural Biology**  Jan 2021 – Dec 2025
     * *Baylor College of Medicine, Houston, Texas, United States*
 * **BSc in Biochemistry and Pharmacology, First Class Honour Degree**  Sept 2019 - Jun 2020
     * *University of Strathclyde, Glasgow, UK*
@@ -29,8 +29,11 @@ redirect_from:
 
 ## RESEARCH EXPERIENCE
 
+### Postdoctoral Associate
+*Baylor College of Medicine, Houston, TX | Dec 2025 - Present*
+
 ### Graduate Research Assistant
-*Baylor College of Medicine, Houston, TX | Mentored by Prof. Jin Wang | Jun 2021 - Present*
+*Baylor College of Medicine, Houston, TX | Mentored by Prof. Jin Wang | Jan 2021 - Dec 2025*
 
 * **Research Focus 1: Develop a Chemoproteomics Platform to Profile Covalent Ligand Binding Kinetics: Covalent Occupancy Kinetics Enrichment via Proteomics (COOKIE-Pro)** (January 2023 – Present)
     * Developed the COOKIE-Pro method for proteome-wide kinetic profiling, integrating chemoproteomics and mass spectrometry to assess covalent inhibitor binding kinetics ($k_{inact}$ and $K_I$).
@@ -91,7 +94,7 @@ redirect_from:
 ## PUBLICATION
 
 ### Research Articles
-1.  **Lin H**, Yang B, Ding L, Yang YY, Holt MV, Jung SY, Zhang B, Wang MC, Wang J. COOKIE-Pro: Covalent Inhibitor Binding Kinetics Profiling on the Proteome Scale. *Nature Communications*, **2025**, Manuscript.
+1.  **Lin H**, Yang B, Ding L, Yang YY, Holt MV, Jung SY, Zhang B, Wang MC, Wang J. COOKIE-Pro: Covalent Inhibitor Binding Kinetics Profiling on the Proteome Scale. *Nature Communications*, **2025**.
 2.  **Lin, H.**, Yu, X., Cheng, R., Qi, X., Yang, Y.-Y., Zhou, S., Che, X. & Wang, J. Beyond the G-Loop: CRBN Molecular Glues Potently Target VAV1 via a Novel SH3 RT-Loop Degron. *Nature Chemical Biology*, **2025**, Manuscript.
 3.  Cheng R†, **Lin H**†, et al. Expanding Cereblon Neosubstrates Beyond G-Loops: A Novel Molecular Glue Strategy for Kinase Degradation. **2025**, Manuscript. †: *These authors contribute equally to this work*.
 4.  Cheng R†, **Lin H**†, et al. Covalent PROTACs achieve sub-nanomolar potency and selective BTK degradation independent of catalytic turnover. **2025**, Manuscript.

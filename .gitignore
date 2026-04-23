@@ -1,2 +1,14 @@
 _site/
+chrome_debug_profile/
+playwright_profile/
+*.json
+*.txt
+scrape_*.py
+open_chrome.py
+debug_page.py
+test_*.py
+convert_figs.py
+.claude/
+*.TIF
+*.tif
 
