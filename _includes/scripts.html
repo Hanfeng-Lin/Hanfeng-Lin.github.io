@@ -1,4 +1,14 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
