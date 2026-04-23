@@ -13,4 +13,6 @@ citation: '<b>Lin H</b>, Yang B, Ding L, Yang YY, Holt MV, Jung SY, Zhang B, Wan
 
 Developed the COOKIE-Pro method for proteome-wide kinetic profiling of covalent inhibitors, integrating chemoproteomics and mass spectrometry to assess binding kinetics (k<sub>inact</sub> and K<sub>I</sub>). The approach identifies high-affinity off-target kinases such as TEC, BTK, and BLK, advancing covalent fragment screening and enabling data-driven covalent drug design.
 
+![Figure 2](/images/blog/cookie-pro/Figure2.png)
+
 [View paper](https://www.nature.com/articles/s41467-025-57847-x)

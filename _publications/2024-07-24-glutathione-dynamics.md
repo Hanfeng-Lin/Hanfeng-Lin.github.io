@@ -9,4 +9,6 @@ paperurl: 'https://doi.org/10.1016/j.cbpa.2024.102505'
 citation: '<b>Lin H</b>, Wang L, Jiang X, Wang J. (2024). Glutathione Dynamics in Subcellular Compartments and Implications for Drug Development. <i>Curr Opin Chem Biol</i>, <b>81</b>, 102505.'
 ---
 
+![Figure 2](/publications/2024-glutathione-dynamics-fig2.png)
+
 [View paper](https://doi.org/10.1016/j.cbpa.2024.102505)
