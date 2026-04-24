@@ -9,6 +9,8 @@ tags:
   - Drug Discovery
 ---
 
+A cellular dose-response does not measure ternary occupancy directly — it measures target protein remaining after occupancy runs against the target's own resynthesis. This post introduces the $\gamma$ filter relating thermodynamic occupancy to observed $D\_{\mathrm{max}}$, explains why biochemical TR-FRET plateaus and cellular $D\_{\mathrm{max}}$ can differ by orders of magnitude on the same compound, and lays out the diagnostics that separate Langmuir-limited, $\gamma$-limited, and downstream-limited regimes.
+
 *This is Part 3 of a three-part series.*
 
 **Notation:** **L** = molecular glue; **E** = CRBN (E3 ligase); **P** = neosubstrate. Binary complex: $L{\cdot}E$. Ternary complex: $P{\cdot}L{\cdot}E$.

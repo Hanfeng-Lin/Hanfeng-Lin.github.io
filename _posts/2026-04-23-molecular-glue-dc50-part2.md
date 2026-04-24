@@ -10,6 +10,8 @@ tags:
   - Drug Discovery
 ---
 
+A single H→Cl swap on a VAV1 molecular glue moves $D\_{\mathrm{max}}$ from 15% to 90% while barely changing CRBN binary affinity — the opposite of what the textbook "pre-organization only moves $\mathrm{DC50}$" story predicts. This post works through the NGT-201 halogen series to show that when target abundance $[P]$ is sub-saturating, the Langmuir ceiling of the ternary complex controls $D\_{\mathrm{max}}$, so even modest $K\_{d,\mathrm{ternary}}$ improvements swing efficacy far more than they swing potency.
+
 *This is Part 2 of a three-part series. [Part 3](/posts/2026/04/molecular-glue-dc50-part3/) covers the cellular kinetic filter, diagnostics, and design implications.*
 
 **Notation:** **L** = molecular glue; **E** = CRBN (E3 ligase); **P** = neosubstrate. Binary complex: $L{\cdot}E$. Ternary complex: $P{\cdot}L{\cdot}E$.
