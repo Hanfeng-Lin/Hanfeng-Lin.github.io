@@ -1,6 +1,6 @@
 ---
 title: 'Understanding Molecular Glue Dose-Response Curves — Part 3: From Biochemistry to the Cell'
-date: 2026-04-22
+date: 2026-04-24
 permalink: /posts/2026/04/molecular-glue-dc50-part3/
 tags:
   - Molecular Glue

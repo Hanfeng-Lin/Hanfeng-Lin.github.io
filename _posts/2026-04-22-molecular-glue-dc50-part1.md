@@ -1,6 +1,6 @@
 ---
 title: 'Understanding Molecular Glue Dose-Response Curves — Part 1: What $\mathrm{DC50}$ and $D\_{\mathrm{max}}$ Actually Mean'
-date: 2026-04-24
+date: 2026-04-22
 permalink: /posts/2026/04/molecular-glue-dc50-part1/
 tags:
   - Molecular Glue
