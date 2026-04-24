@@ -294,7 +294,7 @@ body:hover .visually-hidden button {
 
   .fa-map-marker,
   .fa-map-marker-alt {
-    color: #e74c3c;
+    color: #ea4335;
   }
 
   .ai-pubmed,
@@ -307,8 +307,18 @@ body:hover .visually-hidden button {
     color: #a6ce39;
   }
 
+  .ai-google-scholar,
+  .ai-google-scholar-square,
   .fa-graduation-cap {
     color: #4285f4;
+  }
+
+  .author__icon {
+    display: inline-block;
+    width: 1.25em;
+    height: 1em;
+    vertical-align: -0.15em;
+    object-fit: contain;
   }
 }
 

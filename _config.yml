@@ -86,8 +86,8 @@ author:
   bio              : "Postdoctoral Associate at Baylor College of Medicine | Chemical Biology & Drug Discovery"
   location         : "Houston, TX, US"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Hanfeng+Lin"
-  googlescholar    :
+  pubmed           :
+  googlescholar    : "https://scholar.google.com/citations?user=KbzhEZoAAAAJ&hl=en"
   email            : "hanfeng.lin@bcm.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
