@@ -88,7 +88,7 @@ author:
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=KbzhEZoAAAAJ&hl=en"
-  email            : "hanfeng.lin@bcm.edu"
+  email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -97,7 +97,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "Hanfeng-Lin"
   google_plus      :
   keybase          :
   instagram        :
