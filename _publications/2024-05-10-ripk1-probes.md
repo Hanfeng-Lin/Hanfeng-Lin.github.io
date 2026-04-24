@@ -7,6 +7,10 @@ date: 2024-05-10
 venue: 'ACS Medicinal Chemistry Letters'
 paperurl: 'https://doi.org/10.1021/acsmedchemlett.4c00145'
 citation: 'Yu X, <b>Lin H</b>, Li F, Wang J, Lu D. (2024). Development of Biochemical and Cellular Probes to Study RIPK1 Target Engagement. <i>ACS Med Chem Lett</i>, <b>15</b>(6), 906–916.'
+tags:
+  - Chemical Probes
+  - Covalent Drug Design
+  - Target Engagement
 ---
 
 [View paper](https://doi.org/10.1021/acsmedchemlett.4c00145)

@@ -1,21 +1,21 @@
 ---
-title: "Using Full-Length Transcriptome to Identify Benzylisoquinoline Alkaloid Biosynthetic Genes in <i>Corydalis yanhusuo</i>."
+title: "Integration of full-length transcriptomics and targeted metabolomics to identify benzylisoquinoline alkaloid biosynthetic genes in <i>Corydalis yanhusuo</i>"
 collection: publications
 permalink: /publication/2021-01-10-corydalis-bia-biosynthesis
-excerpt: 'Published at Hortic Res. 2021 
-
-
-Xu D†, Lin H†, Zhang K, Li C, Zhao X, Xu J, Zhao Y.
-
-
-†: These authors contribute equally to this work.
-
-
-This paper used a combined method of transcriptomic and metabolomic analysis in order to excavating the candidate genes participating in the benzylisoquinoline biosynthesis in <i>Corydalis yanhusuo</i>.
+excerpt: 'A combined full-length transcriptomic and targeted metabolomic analysis to identify candidate genes involved in benzylisoquinoline alkaloid biosynthesis in <i>Corydalis yanhusuo</i>.
 
 
 <img src="/publications/2021-corydalis-bia-biosynthesis-figure5.png">
 '
+date: 2021-01-10
+venue: 'Horticulture Research'
+paperurl: 'https://doi.org/10.1038/s41438-020-00450-6'
+citation: 'Xu D†, <b>Lin H</b>†, Tang Y, Huang L, Xu J, Nian S, Zhao Y. (2021). Integration of full-length transcriptomics and targeted metabolomics to identify benzylisoquinoline alkaloid biosynthetic genes in <i>Corydalis yanhusuo</i>. <i>Horticulture Research</i>, <b>8</b>, 16. (†: equal contribution)'
+tags:
+  - Natural Products
+  - Alkaloids
+  - Transcriptomics
+  - Plant Biology
 ---
 Published at Hortic Res. 2021 
 
