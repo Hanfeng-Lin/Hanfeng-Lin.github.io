@@ -57,12 +57,12 @@ I am a chemical biology researcher with a focus on drug design and screening. My
     <div class="research-card__desc">PROTACs and Molecular Glues for targeted protein degradation</div>
   </div>
   <div class="research-card">
-    <div class="research-card__icon"><i class="fas fa-dna"></i></div>
+    <div class="research-card__icon"><i class="fas fa-flask"></i></div>
     <div class="research-card__title">Chemoproteomics</div>
     <div class="research-card__desc">Proteome-wide profiling of covalent inhibitor binding kinetics (COOKIE-Pro)</div>
   </div>
   <div class="research-card">
-    <div class="research-card__icon"><i class="fas fa-cube"></i></div>
+    <div class="research-card__icon"><i class="fas fa-atom"></i></div>
     <div class="research-card__title">Structure-based Computational Biology</div>
     <div class="research-card__desc"><em>In silico</em> modeling of ternary complexes, MD simulation, and FEP-guided lead optimization</div>
   </div>
