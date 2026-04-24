@@ -11,4 +11,5 @@ convert_figs.py
 .claude/
 *.TIF
 *.tif
+CV--*.pdf
 

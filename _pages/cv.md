@@ -33,9 +33,11 @@ redirect_from:
 *Baylor College of Medicine, Houston, TX | Dec 2025 - Present*
 
 ### Graduate Research Assistant
-*Baylor College of Medicine, Houston, TX | Mentored by Prof. Jin Wang | Jan 2021 - Dec 2025*
+*Baylor College of Medicine, Houston, TX | Mentored by Prof. Jin Wang | Jun 2021 - Dec 2025*
 
-* **Research Focus 1: Develop a Chemoproteomics Platform to Profile Covalent Ligand Binding Kinetics: Covalent Occupancy Kinetics Enrichment via Proteomics (COOKIE-Pro)** (January 2023 – Present)
+**Dissertation Title**: *"From Covalent Fragments to Molecular Glues: Chemoproteomics-Driven Exploration of Novel Mechanisms in Next Generation Therapeutics"*
+
+* **Research Focus 1: Develop a Chemoproteomics Platform to Profile Covalent Ligand Binding Kinetics: Covalent Occupancy Kinetics Enrichment via Proteomics (COOKIE-Pro)** (January 2023 – April 2025)
     * Developed the COOKIE-Pro method for proteome-wide kinetic profiling, integrating chemoproteomics and mass spectrometry to assess covalent inhibitor binding kinetics ($k_{inact}$ and $K_I$).
     * Identified high-affinity off-target kinases such as TEC, BTK, and BLK, advancing covalent fragment screening.
     * Optimized covalent inhibitor design using kinetic modeling, introducing a two-step fitting process to estimate kinetic parameters with improved accuracy and reduced sample size. Ranked fragment-cysteine interactions based on ligand efficiency (LE) and ligand lipophilic efficiency (LLE).
@@ -61,6 +63,7 @@ redirect_from:
 * **Research Focus 5: Rational Design of Bifunctional Molecules for Targeted Protein Degradation** (June 2021 – June 2023)
     * Developed a PROTAC-induced ternary complex *in silico* modeling pipeline using a linker-centric approach and parallel molecular dynamics (MD) simulation.
     * Investigated the impact of linker design in PROTAC molecules on degradation potency, offering insights through in-silico modeling and establishing a structure-activity relationship (SAR) for protein degradation drugs.
+    * Applied global proteomics, TR-FRET binding assays, and protein degradation assays to demonstrate a novel drug design approach, expanding the targetable protein space via molecular glue.
     * My integrated computational pipeline successfully predicted and provided clues for a cryo-EM structure solution of an in-house PROTAC.
 
 ### Undergraduate Thesis Project
@@ -105,16 +108,19 @@ redirect_from:
 9.  Wang L, **Lin H**, Yang B, Jiang X, Chen J, Roy Chowdhury S, Cheng N, Nakata PA, Lonard DM, Wang MC, Wang J. Development of a Novel Amplifiable System to Quantify Hydrogen Peroxide in Living Cells. *J Am Chem Soc.* **2024** Aug 14;146(32):22396-22404.
 10. Sun Z, **Lin H**, Hu L, Neetu N, Sankaran B, Wang J, Prasad BVV, Palzkill T. Klebsiella pneumoniae Carbapenemase Variant 44 Acquires Ceftazidime-Avibactam Resistance by Altering the Conformation of Active-Site Loops. *J Biol Chem.* **2024** Jan;300(1):105493.
 11. Yu X, **Lin H**, Li F, Wang J, Lu D. Development of Biochemical and Cellular Probes to Study RIPK1 Target Engagement. *ACS Med Chem Lett.* **2024** May 10;15(6):906-916.
-12. Yu X, Lu D, Qi X, **Lin H**, Holloman BL, Jin F, Xu L, Ding L, Peng W, Wang MC, Chen X, Wang J. Development of a First-in-Class RIPK1 Degrader to Enhance Antitumor Immunity. *Nat Commun.* **2024**.
+12. Lu D, Yu X, **Lin H**, Cheng R, Yang B, Zhang M, Chen J, Li F, Qi X, Wang J. Design, Optimization, and Development of RIPK1 Degraders with Improved Pharmacokinetic and Pharmacodynamic Properties. *J Med Chem.* **2025** Nov 13;68(21):22246-22263.
 13. Yu X, Guo W-H, **Lin H**, Cheng R, Monroy EY, Jin F, Ding L, Lu D, Qi X, Wang MC, Wang J. Discovery of a Potent BTK and IKZF1/3 Triple Degrader Through Reversible Covalent BTK PROTAC Development. *Curr Res Chem Biol.* **2022**; 2:100029.
 14. Lu D, Yu X, **Lin H**, Cheng R, Monroy EY, Qi X, Wang MC, Wang J. Applications of Covalent Chemistry in Targeted Protein Degradation. *Chem Soc Rev.* **2022** Nov 14;51(22):9243-9261.
 15. Lu S, Hu L, **Lin H**, Judge A, Rivera P, Palaniappan M, Sankaran B, Wang J, Prasad BVV, Palzkill T. An Active Site Loop Toggles Between Conformations to Control Antibiotic Hydrolysis and Inhibition Potency for CTX-M β-Lactamase Drug-Resistance Enzymes. *Nat Commun.* **2022** Nov 7;13(1):6726.
 16. Bao Z, Zhang K, **Lin H**, Li C, Zhao X, Wu J, Nian S. Identification and Selection of Reference Genes for Quantitative Transcript Analysis in *Corydalis yanhusuo*. *Genes*. **2020**;11(2):130.
-17. Wang Z, Xu J, Liu Y, Chen J, **Lin H**, Huang Y, Bian X, Zhao Y. Selection and Validation of Appropriate Reference Genes for Real-Time Quantitative PCR Analysis in *Momordica charantia*. *Phytochemistry*. **2019** Apr;164:1-11.
-18. Zhang J, Gao D, Li Q, Zhao Y, **Lin H**, Bi Q, Zhao Y. Biodegradation of Polyethylene Microplastic Particles by the Fungus *Aspergillus Flavus* From the Guts of Wax Moth *Galleria Mellonella*. *Sci Total Environ.* **2020** Feb;704:135931.
-19. Wang L, Yu X, Xu W, Zhang J, **Lin H**, Zhao Y. Complete Chloroplast Genome Sequencing Supports *Angelica decursiva* as an Independent Species From *Peucedanum praeruptorum*. *Physiol Mol Biol Plants.* **2021** Nov;27(11):2503-2515.
+17. Yu X, Lu D, Qi X, Paudel RR, **Lin H**, Holloman BL, Jin F, Xu L, Ding L, Peng W, Wang MC, Chen X, Wang J. Development of a RIPK1 Degrader to Enhance Antitumor Immunity. *Nat Commun.* **2024** Dec 16;15(1):10683.
+18. Xu D, Cheng S, Zhang J, **Lin H**, Chen Y, Yue S, Tian M, Tang Y, Zhao Y. *Morus alba* L. Leaves — Integration of Their Transcriptome and Metabolomics Dataset: Investigating Potential Genes Involved in Flavonoid Biosynthesis at Different Harvest Times. *Front Plant Sci.* **2021** Nov 16;12:736332.
+19. Wang Z, Xu J, Liu Y, Chen J, **Lin H**, Huang Y, Bian X, Zhao Y. Selection and Validation of Appropriate Reference Genes for Real-Time Quantitative PCR Analysis in *Momordica charantia*. *Phytochemistry*. **2019** Apr;164:1-11.
+20. Zhang J, Gao D, Li Q, Zhao Y, **Lin H**, Bi Q, Zhao Y. Biodegradation of Polyethylene Microplastic Particles by the Fungus *Aspergillus Flavus* From the Guts of Wax Moth *Galleria Mellonella*. *Sci Total Environ.* **2020** Feb;704:135931.
+21. Wang L, Yu X, Xu W, Zhang J, **Lin H**, Zhao Y. Complete Chloroplast Genome Sequencing Supports *Angelica decursiva* as an Independent Species From *Peucedanum praeruptorum*. *Physiol Mol Biol Plants.* **2021** Nov;27(11):2503-2515.
 
 ### Conference Posters
+* **Lin H**, Yu X, Cheng R, Qi X, Yang Y, Zhou S, Che X, Wang J. Beyond the G-Loop: CRBN Molecular Glues Potently Target VAV1 via a Novel SH3 RT-Loop Degron. Welch Conference 2025. Houston, TX.
 * **Lin H**, Yang B, Cheng R, Lu D, Jung SY, Wang J. COOKIE-Pro: A Chemoproteomics Method for Covalent Inhibitor Binding Kinetics Profiling. Drug Discovery Chemistry 2024. San Diego, CA. (*Nominated for Poster Finalist*).
 * Yang, K., **Lin, H.**, Larsen, B., Sun, H., Hakimi, A., Pekar Hart, T. & Wang, J. High-throughput compound screening workflow for targeted protein degradation on an Orbitrap Astral mass spectrometer with accurate label-free quantitation. American Society of Mass Spectrometry 2025, Baltimore, MD.
 * Cheng R, **Lin H**, Lu D, Wang J. Development of a Highly Potent Covalent BTK PROTAC: Sub-Stoichiometric Degradation is Dispensable. Drug Discovery Chemistry 2024. San Diego, CA.
@@ -126,7 +132,8 @@ redirect_from:
 ---
 
 ## HONORS & AWARDS
-* Texas Advanced Computing Center Leadership Resource Allocation (LRAC)
+* 37th Annual Symposium SCBA-TX — The Finalist Award
+* Texas Advanced Computing Center Leadership Resource Allocation (LRAC) — Application of MD Simulations to Rationally Design PROTACs
 * Baylor College of Medicine – Full tuition scholarship
 * University of Strathclyde First Class Honours in BSc Biochemistry and Pharmacology
 * China Pharmaceutical University The First-class Scholarship of Exploring World Plan
