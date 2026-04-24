@@ -2,7 +2,9 @@
 
 <script>
   MathJax = {
+    loader: {load: ['[tex]/color']},
     tex: {
+      packages: {'[+]': ['color']},
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']]
     }

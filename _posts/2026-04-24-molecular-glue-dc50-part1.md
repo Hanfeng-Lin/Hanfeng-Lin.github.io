@@ -27,7 +27,7 @@ $$
 
 where D is fractional degradation (1 − protein_treated / protein_vehicle), $D_{\mathrm{max}}$ is the achievable plateau, and n is the Hill coefficient.
 
-The definition most people mean — and what curve-fitting software actually returns — is the half-maximal concentration: the $[L]$ at which D($[L]$) = $D_{\mathrm{max}}$ / 2. This is the midpoint of the Hill curve, the direct analog of EC50 or IC50, and it's always defined regardless of how high or low $D_{\mathrm{max}}$ sits. The other definition, $\mathrm{DC50}_\mathrm{abs}$, asks instead for the concentration at which D($[L]$) = 0.5 — i.e., protein falls to exactly 50% of vehicle. That number only exists when $D_{\mathrm{max}}$ ≥ 0.5. If a compound maxes out at 40% degradation, no concentration ever achieves 50% and this "$\mathrm{DC50}$" is simply undefined.
+The definition most people mean — and what curve-fitting software actually returns — is the half-maximal concentration: the $[L]$ at which D($[L]$) = $D_{\mathrm{max}}$ / 2. This is the midpoint of the Hill curve, the direct analog of EC50 or IC50, and it's always defined regardless of how high or low $D_{\mathrm{max}}$ sits. The other definition, $\mathrm{DC50}_{\mathrm{abs}}$, asks instead for the concentration at which D($[L]$) = 0.5 — i.e., protein falls to exactly 50% of vehicle. That number only exists when $D_{\mathrm{max}}$ ≥ 0.5. If a compound maxes out at 40% degradation, no concentration ever achieves 50% and this "$\mathrm{DC50}$" is simply undefined.
 
 Solving the Hill equation at D = 0.5 gives the relationship between them (with n = 1):
 
@@ -35,11 +35,11 @@ $$
 [L]_{50\%\,\mathrm{abs}} = \mathrm{DC50}_{\mathrm{half\text{-}max}} \cdot \frac{0.5}{D_{\mathrm{max}} - 0.5}
 $$
 
-At $D_{\mathrm{max}}$ = 0.6, the two differ by 5×. Below $D_{\mathrm{max}}$ = 0.5, $\mathrm{DC50}_\mathrm{abs}$ disappears entirely while $\mathrm{DC50}_\mathrm{half\text{-}max}$ remains a perfectly finite, meaningful number.
+At $D_{\mathrm{max}}$ = 0.6, the two differ by 5×. Below $D_{\mathrm{max}}$ = 0.5, $\mathrm{DC50}_{\mathrm{abs}}$ disappears entirely while $\mathrm{DC50}_{\mathrm{half\text{-}max}}$ remains a perfectly finite, meaningful number.
 
 The practical consequence is that ranking compounds by "$\mathrm{DC50}$" is treacherous when $D_{\mathrm{max}}$ varies across a series. A partial degrader with genuinely sub-nM ternary binding can look worse than a weaker but fully-efficacious glue under the absolute definition, because efficacy gets smuggled into what should be a pure potency number. Throughout this series, $\mathrm{DC50}$ means half-maximal, consistent with how curve-fitting software reports it.
 
-![Figure 1 — Two $\mathrm{DC50}$ definitions on the same Hill curve ($D_{\mathrm{max}}$ = 60%). $\mathrm{DC50}_\mathrm{abs}$ is 5× higher than $\mathrm{DC50}_\mathrm{half\text{-}max}$; below $D_{\mathrm{max}}$ = 50% it is undefined entirely.](/images/blog/molecular-glue-dc50/fig1_dc50_definitions.png)
+![Figure 1 — Two $\mathrm{DC50}$ definitions on the same Hill curve ($D_{\mathrm{max}}$ = 60%). $\mathrm{DC50}_{\mathrm{abs}}$ is 5× higher than $\mathrm{DC50}_{\mathrm{half\text{-}max}}$; below $D_{\mathrm{max}}$ = 50% it is undefined entirely.](/images/blog/molecular-glue-dc50/fig1_dc50_definitions.png)
 
 ## $\mathrm{DC50}$ in terms of ternary complex thermodynamics
 
@@ -87,13 +87,13 @@ $$
 
 with plateau $\textcolor{#2166ac}{\beta/(1+\beta)}$ and half-max $\textcolor{#d6604d}{K_{d,\,\mathrm{CRBN}}/(1+\beta)}$. The simplification relies on $[P]$ being held constant — valid when $[P]$ is in large excess over $[L{\cdot}E]$, or when analyzing E occupancy with $[P]$ as a fixed parameter. If ternary complex formation meaningfully depletes $[P]$, the expression becomes non-hyperbolic.
 
-Two parameters fall out cleanly. The plateau is $\beta/(1+\beta)$. The half-max of $f_\mathrm{PLE}$ — the concentration at which ternary occupancy reaches half its ceiling — is exactly:
+Two parameters fall out cleanly. The plateau is $\beta/(1+\beta)$. The half-max of $f_{\mathrm{PLE}}$ — the concentration at which ternary occupancy reaches half its ceiling — is exactly:
 
 $$
-[L]_{1/2}^{f_\mathrm{PLE}} = \frac{K_{d,\,\mathrm{CRBN}}}{1+\beta} = \frac{K_{d,\,\mathrm{CRBN}} \cdot K_{d,\,\mathrm{ternary}}}{K_{d,\,\mathrm{ternary}} + [P]}
+[L]_{1/2}^{f_{\mathrm{PLE}}} = \frac{K_{d,\,\mathrm{CRBN}}}{1+\beta} = \frac{K_{d,\,\mathrm{CRBN}} \cdot K_{d,\,\mathrm{ternary}}}{K_{d,\,\mathrm{ternary}} + [P]}
 $$
 
-This is not the same as the cellular $\mathrm{DC50}$. The cellular $\mathrm{DC50}$ is the half-max of D($[L]$), which passes through the $\gamma$-filter (Part 3). Working through that filter gives $\mathrm{DC50}_\mathrm{cellular}$ = $K_{d,\mathrm{CRBN}}$ / (1 + $\beta(1+\gamma)$), shifted further left than the thermodynamic half-max by a $\gamma\beta$ term in the denominator. The formula above is therefore an approximation to cellular $\mathrm{DC50}$ — exact when $\gamma$ is small or $\beta$ is small, increasingly optimistic as the degradation machinery becomes more efficient. With that caveat in mind:
+This is not the same as the cellular $\mathrm{DC50}$. The cellular $\mathrm{DC50}$ is the half-max of D($[L]$), which passes through the $\gamma$-filter (Part 3). Working through that filter gives $\mathrm{DC50}_{\mathrm{cellular}}$ = $K_{d,\mathrm{CRBN}}$ / (1 + $\beta(1+\gamma)$), shifted further left than the thermodynamic half-max by a $\gamma\beta$ term in the denominator. The formula above is therefore an approximation to cellular $\mathrm{DC50}$ — exact when $\gamma$ is small or $\beta$ is small, increasingly optimistic as the degradation machinery becomes more efficient. With that caveat in mind:
 
 $$
 \mathrm{DC50} \approx \frac{K_{d,\,\mathrm{CRBN}} \cdot K_{d,\,\mathrm{ternary}}}{K_{d,\,\mathrm{ternary}} + [P]}
@@ -103,13 +103,13 @@ The two limiting regimes tell the story. When the target is abundant and the ter
 
 This is the thermodynamic backbone. Everything else is embellishment on top.
 
-![Figure 2 — Two-step binding equilibrium. L and E associate with $K_{d,\mathrm{CRBN}}$ to form the binary complex; recruitment of neosubstrate P (governed by $K_{d,\mathrm{ternary}}$ and cooperativity $\alpha$) forms the productive ternary complex; ubiquitin transfer ($k_\mathrm{ub}$ · P(transfer)) drives target degradation.](/images/blog/molecular-glue-dc50/fig2_ternary_equilibrium.png)
+![Figure 2 — Two-step binding equilibrium. L and E associate with $K_{d,\mathrm{CRBN}}$ to form the binary complex; recruitment of neosubstrate P (governed by $K_{d,\mathrm{ternary}}$ and cooperativity $\alpha$) forms the productive ternary complex; ubiquitin transfer ($k_{\mathrm{ub}}$ · P(transfer)) drives target degradation.](/images/blog/molecular-glue-dc50/fig2_ternary_equilibrium.png)
 
 ## Reading dose-response shifts: up vs right
 
 When two compounds' dose-response curves differ, the direction of the shift encodes mechanistic information — and it's worth reading carefully before reaching for an explanation.
 
-If the curve moves up ($D_{\mathrm{max}}$ drops, $\mathrm{DC50}$ unchanged), you have the same apparent potency but a lower achievable plateau. Something is rate-limiting downstream of ternary complex formation, or capping the degradable pool. The most common culprits are compromised ubiquitination geometry — $k_\mathrm{ub}$ drops even though $[P{\cdot}L{\cdot}E]$ saturates normally — a degradation-resistant subpopulation of target that is compartmentalized or sequestered in a complex, target resynthesis outpacing the degradation rate, UPS saturation at high compound doses, or non-productive ternary engagement that forms complex but fails to position lysines correctly. Up-shift diagnostics focus on geometry and accessibility; in vitro ubiquitination assays can separate $k_\mathrm{ub}$ from occupancy cleanly.
+If the curve moves up ($D_{\mathrm{max}}$ drops, $\mathrm{DC50}$ unchanged), you have the same apparent potency but a lower achievable plateau. Something is rate-limiting downstream of ternary complex formation, or capping the degradable pool. The most common culprits are compromised ubiquitination geometry — $k_{\mathrm{ub}}$ drops even though $[P{\cdot}L{\cdot}E]$ saturates normally — a degradation-resistant subpopulation of target that is compartmentalized or sequestered in a complex, target resynthesis outpacing the degradation rate, UPS saturation at high compound doses, or non-productive ternary engagement that forms complex but fails to position lysines correctly. Up-shift diagnostics focus on geometry and accessibility; in vitro ubiquitination assays can separate $k_{\mathrm{ub}}$ from occupancy cleanly.
 
 If the curve moves right ($\mathrm{DC50}$ rises, $D_{\mathrm{max}}$ unchanged), the plateau is preserved but more compound is needed to reach it. Something is shifting the binding side: weaker $K_{d,\mathrm{CRBN}}$, weaker $K_{d,\mathrm{ternary}}$ or lower cooperativity $\alpha$, reduced intracellular exposure through permeability or efflux (P-gp is a classic SAR trap), metabolic instability within the assay window, or off-target compound sequestration. Right-shift diagnostics focus on biochemistry versus exposure, and a matched biochemical TR-FRET assay will quickly distinguish a thermodynamic cause from a pharmacokinetic one.
 

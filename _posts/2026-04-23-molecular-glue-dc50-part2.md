@@ -14,7 +14,7 @@ tags:
 
 **Notation:** **L** = molecular glue; **E** = CRBN (E3 ligase); **P** = neosubstrate. Binary complex: $L{\cdot}E$. Ternary complex: $P{\cdot}L{\cdot}E$.
 
-**Recap from [Part 1](/posts/2026/04/molecular-glue-dc50-part1/).** $\mathrm{DC50}$ always means the half-maximal concentration (midpoint of the Hill curve), not the concentration achieving 50% absolute degradation — those two definitions diverge whenever $D_{\mathrm{max}}$ < 100%, and conflating them corrupts potency rankings across a series. Thermodynamically, $\mathrm{DC50}$ is set by a single expression: $\mathrm{DC50}$ ≈ $K_{d,\mathrm{CRBN}}$ · $K_{d,\mathrm{ternary}}$ / ($K_{d,\mathrm{ternary}}$ + $[P]$), with the achievable plateau fixed at $f_\mathrm{PLE}$ = $\beta/(1+\beta)$ where $\beta$ = $[P]$/$K_{d,\mathrm{ternary}}$. Reading curve shifts: a $D_{\mathrm{max}}$ drop at unchanged $\mathrm{DC50}$ points to a downstream problem (geometry, resistant subpopulation, UPS saturation); a $\mathrm{DC50}$ rightward shift at unchanged $D_{\mathrm{max}}$ points to a binding or exposure problem (weaker $K_d$, efflux, metabolic instability).
+**Recap from [Part 1](/posts/2026/04/molecular-glue-dc50-part1/).** $\mathrm{DC50}$ always means the half-maximal concentration (midpoint of the Hill curve), not the concentration achieving 50% absolute degradation — those two definitions diverge whenever $D_{\mathrm{max}}$ < 100%, and conflating them corrupts potency rankings across a series. Thermodynamically, $\mathrm{DC50}$ is set by a single expression: $\mathrm{DC50}$ ≈ $K_{d,\mathrm{CRBN}}$ · $K_{d,\mathrm{ternary}}$ / ($K_{d,\mathrm{ternary}}$ + $[P]$), with the achievable plateau fixed at $f_{\mathrm{PLE}}$ = $\beta/(1+\beta)$ where $\beta$ = $[P]$/$K_{d,\mathrm{ternary}}$. Reading curve shifts: a $D_{\mathrm{max}}$ drop at unchanged $\mathrm{DC50}$ points to a downstream problem (geometry, resistant subpopulation, UPS saturation); a $\mathrm{DC50}$ rightward shift at unchanged $D_{\mathrm{max}}$ points to a binding or exposure problem (weaker $K_d$, efflux, metabolic instability).
 
 ## Opening puzzle: Compound 11 vs Compound 17
 
@@ -56,30 +56,30 @@ Take two compounds in the same cellular system with a matched ternary complex mo
 
 $$\mathrm{DC50} \approx \frac{K_{d,\mathrm{CRBN}} \cdot K_{d,\mathrm{ternary}}}{K_{d,\mathrm{ternary}} + [P]}$$
 
-— it depends on the product of the two $K_d$ values. That means two compounds can hit the same $\mathrm{DC50}$ through opposite changes: one can have a weaker $K_{d,\mathrm{ternary}}$ paired with a correspondingly tighter $K_{d,\mathrm{CRBN}}$, and the other can have the reverse. The DC50s match, but the plateau $\beta/(1+\beta)$ depends only on $K_{d,\mathrm{ternary}}$ versus $[P]$, so the compound with weaker $K_{d,\mathrm{ternary}}$ will reach a lower $f_\mathrm{PLE}$ ceiling.
+— it depends on the product of the two $K_d$ values. That means two compounds can hit the same $\mathrm{DC50}$ through opposite changes: one can have a weaker $K_{d,\mathrm{ternary}}$ paired with a correspondingly tighter $K_{d,\mathrm{CRBN}}$, and the other can have the reverse. The DC50s match, but the plateau $\beta/(1+\beta)$ depends only on $K_{d,\mathrm{ternary}}$ versus $[P]$, so the compound with weaker $K_{d,\mathrm{ternary}}$ will reach a lower $f_{\mathrm{PLE}}$ ceiling.
 
-**A second possibility is that intracellular exposure caps out** before the dose-response reaches saturation. Every cellular assay has a highest testable dose, set by solubility, DMSO tolerance, or off-target toxicity. If that ceiling falls below where $f_\mathrm{PLE}$ would plateau, the "$D_{\mathrm{max}}$" you read off the curve isn't the true plateau at all — it's the point where you ran out of compound.
+**A second possibility is that intracellular exposure caps out** before the dose-response reaches saturation. Every cellular assay has a highest testable dose, set by solubility, DMSO tolerance, or off-target toxicity. If that ceiling falls below where $f_{\mathrm{PLE}}$ would plateau, the "$D_{\mathrm{max}}$" you read off the curve isn't the true plateau at all — it's the point where you ran out of compound.
 
-**A third possibility is residence time** — the compound's $k_\mathrm{off}$ on the ternary complex. Two compounds can have matched equilibrium $K_{d,\mathrm{ternary}}$ but very different $k_\mathrm{off}$ values (with $k_\mathrm{on}$ adjusting in compensation). Residence time controls how long each ternary encounter survives, which in turn controls whether ubiquitin transfer has time to fire.
+**A third possibility is residence time** — the compound's $k_{\mathrm{off}}$ on the ternary complex. Two compounds can have matched equilibrium $K_{d,\mathrm{ternary}}$ but very different $k_{\mathrm{off}}$ values (with $k_{\mathrm{on}}$ adjusting in compensation). Residence time controls how long each ternary encounter survives, which in turn controls whether ubiquitin transfer has time to fire.
 
 <details markdown="1">
 <summary>Why residence time is a separate lever from K_d (math detour)</summary>
 
-At equilibrium, $K_d = k_\mathrm{off}/k_\mathrm{on}$. You cannot vary $k_\mathrm{off}$ independently while holding $K_d$ fixed — $k_\mathrm{on}$ has to move in compensation. "Same $K_{d,\mathrm{ternary}}$, different residence time" specifically means $k_\mathrm{off}$ and $k_\mathrm{on}$ scale together.
+At equilibrium, $K_d = k_{\mathrm{off}}/k_{\mathrm{on}}$. You cannot vary $k_{\mathrm{off}}$ independently while holding $K_d$ fixed — $k_{\mathrm{on}}$ has to move in compensation. "Same $K_{d,\mathrm{ternary}}$, different residence time" specifically means $k_{\mathrm{off}}$ and $k_{\mathrm{on}}$ scale together.
 
-Residence time depends only on $k_\mathrm{off}$:
+Residence time depends only on $k_{\mathrm{off}}$:
 
-$$\tau = 1 / k_\mathrm{off}$$
+$$\tau = 1 / k_{\mathrm{off}}$$
 
-There is no dependence on $K_d$ or $k_\mathrm{on}$. Two compounds with matched $K_{d,\mathrm{ternary}}$ but different $k_\mathrm{off}$ values have different residence times, full stop.
+There is no dependence on $K_d$ or $k_{\mathrm{on}}$. Two compounds with matched $K_{d,\mathrm{ternary}}$ but different $k_{\mathrm{off}}$ values have different residence times, full stop.
 
 Ubiquitin transfer is a catalytic event with its own timescale. What determines productive degradation is whether the ternary complex survives long enough for Ub transfer to occur:
 
-$$P(\text{productive transfer per binding event}) = \frac{k_\mathrm{cat}}{k_\mathrm{cat} + k_\mathrm{off}}$$
+$$P(\text{productive transfer per binding event}) = \frac{k_{\mathrm{cat}}}{k_{\mathrm{cat}} + k_{\mathrm{off}}}$$
 
-When $k_\mathrm{off}$ is much slower than $k_\mathrm{cat}$, nearly every binding event produces a Ub transfer, and further slowing $k_\mathrm{off}$ returns almost nothing. When $k_\mathrm{off}$ is much faster than $k_\mathrm{cat}$, most events dissociate before transfer happens and slowing $k_\mathrm{off}$ directly improves the yield per encounter. The degradation flux is $k_\mathrm{on} \cdot [L{\cdot}E] \cdot [P] \cdot P(\text{transfer})$. At fixed $K_{d,\mathrm{ternary}}$, the product $k_\mathrm{on} \cdot P(\text{transfer})$ increases as $k_\mathrm{off}$ slows, so matched $K_d$ with slower $k_\mathrm{off}$ gives higher degradation flux — provided you are not already in the saturating regime.
+When $k_{\mathrm{off}}$ is much slower than $k_{\mathrm{cat}}$, nearly every binding event produces a Ub transfer, and further slowing $k_{\mathrm{off}}$ returns almost nothing. When $k_{\mathrm{off}}$ is much faster than $k_{\mathrm{cat}}$, most events dissociate before transfer happens and slowing $k_{\mathrm{off}}$ directly improves the yield per encounter. The degradation flux is $k_{\mathrm{on}} \cdot [L{\cdot}E] \cdot [P] \cdot P(\text{transfer})$. At fixed $K_{d,\mathrm{ternary}}$, the product $k_{\mathrm{on}} \cdot P(\text{transfer})$ increases as $k_{\mathrm{off}}$ slows, so matched $K_d$ with slower $k_{\mathrm{off}}$ gives higher degradation flux — provided you are not already in the saturating regime.
 
-**Summary:** $K_{d,\mathrm{ternary}}$ sets the equilibrium occupancy of the ternary complex at any given $[L]$, while $k_\mathrm{off}$ sets the catalytic efficiency per occupied complex through $P(\text{transfer})$. Same $K_d$ with slower $k_\mathrm{off}$ wins on $D_{\mathrm{max}}$. Same $k_\mathrm{off}$ with tighter $K_d$ wins on $\mathrm{DC50}$.
+**Summary:** $K_{d,\mathrm{ternary}}$ sets the equilibrium occupancy of the ternary complex at any given $[L]$, while $k_{\mathrm{off}}$ sets the catalytic efficiency per occupied complex through $P(\text{transfer})$. Same $K_d$ with slower $k_{\mathrm{off}}$ wins on $D_{\mathrm{max}}$. Same $k_{\mathrm{off}}$ with tighter $K_d$ wins on $\mathrm{DC50}$.
 
 </details>
 
@@ -99,13 +99,13 @@ For compound 11 vs compound 17, most of these are quickly ruled out: same scaffo
 
 Pre-organization means the compound's free-solution conformational ensemble is already enriched in the productive pose — exactly what the DFT scans showed for compound 17 above. To see why this translates into thermodynamics, decompose the free energy of ternary formation into two pieces:
 
-$$\Delta G_\mathrm{ternary} \;=\; \underbrace{\Delta G_\mathrm{conf}}_{\text{free} \,\to\, \text{bound pose}} \;+\; \underbrace{\Delta G_\mathrm{bind}}_{\text{bound-pose ligand} \,\to\, \text{ternary complex}}$$
+$$\Delta G_{\mathrm{ternary}} \;=\; \underbrace{\Delta G_{\mathrm{conf}}}_{\text{free} \,\to\, \text{bound pose}} \;+\; \underbrace{\Delta G_{\mathrm{bind}}}_{\text{bound-pose ligand} \,\to\, \text{ternary complex}}$$
 
-A pre-organized compound pays a small $\Delta G_\mathrm{conf}$ because it spends most of its time near the productive geometry. An unconstrained analog pays more. If the ternary complex pose is genuinely identical between them — same CRBN contacts, same neosubstrate interface — then $\Delta G_\mathrm{bind}$ is matched, and the entire thermodynamic difference lives in $\Delta G_\mathrm{conf}$.
+A pre-organized compound pays a small $\Delta G_{\mathrm{conf}}$ because it spends most of its time near the productive geometry. An unconstrained analog pays more. If the ternary complex pose is genuinely identical between them — same CRBN contacts, same neosubstrate interface — then $\Delta G_{\mathrm{bind}}$ is matched, and the entire thermodynamic difference lives in $\Delta G_{\mathrm{conf}}$.
 
-Binary TE in the NanoBRET assay measures L + E ⇌ $L{\cdot}E$ and averages over whatever binary poses CRBN accepts. It does not require the productive ternary-competent pose. So matched binary $K_d$ can coexist with very different propensities to access the ternary pose in solution. The chlorine in compound 17 pays off specifically at the ternary assembly step — smaller $\Delta G_\mathrm{conf}$ on the path to the productive state — and should show up as tighter $K_{d,\mathrm{ternary}}$ with barely any change (or even slight loss) in $K_{d,\mathrm{CRBN}}$. Same binary affinity, different cooperativity $\alpha$ = $K_{d,\mathrm{CRBN}}(\mathrm{alone})$ / $K_{d,\mathrm{CRBN}}(\mathrm{in\ ternary})$.
+Binary TE in the NanoBRET assay measures L + E ⇌ $L{\cdot}E$ and averages over whatever binary poses CRBN accepts. It does not require the productive ternary-competent pose. So matched binary $K_d$ can coexist with very different propensities to access the ternary pose in solution. The chlorine in compound 17 pays off specifically at the ternary assembly step — smaller $\Delta G_{\mathrm{conf}}$ on the path to the productive state — and should show up as tighter $K_{d,\mathrm{ternary}}$ with barely any change (or even slight loss) in $K_{d,\mathrm{CRBN}}$. Same binary affinity, different cooperativity $\alpha$ = $K_{d,\mathrm{CRBN}}(\mathrm{alone})$ / $K_{d,\mathrm{CRBN}}(\mathrm{in\ ternary})$.
 
-In the clean idealization, the consequence looks simple: $K_{d,\mathrm{ternary}}$ differs, and $\mathrm{DC50}$ shifts proportionally via the $K_{d,\mathrm{ternary}}$ term in the $\mathrm{DC50}$ formula. $D_{\mathrm{max}}$ is *supposedly* unaffected in the saturating regime — at saturating compound, both compounds drive $f_\mathrm{PLE}$ toward $\beta/(1+\beta)$, and if $[P]$ ≫ $K_{d,\mathrm{ternary}}$ for both, both plateau near 1 and $D_{\mathrm{max}}$ matches.
+In the clean idealization, the consequence looks simple: $K_{d,\mathrm{ternary}}$ differs, and $\mathrm{DC50}$ shifts proportionally via the $K_{d,\mathrm{ternary}}$ term in the $\mathrm{DC50}$ formula. $D_{\mathrm{max}}$ is *supposedly* unaffected in the saturating regime — at saturating compound, both compounds drive $f_{\mathrm{PLE}}$ toward $\beta/(1+\beta)$, and if $[P]$ ≫ $K_{d,\mathrm{ternary}}$ for both, both plateau near 1 and $D_{\mathrm{max}}$ matches.
 
 That last claim — $D_{\mathrm{max}}$ unaffected — is where the textbook prediction breaks. The opening puzzle (big $D_{\mathrm{max}}$ swing, modest $\mathrm{DC50}$ swing) is the exact inversion of it. Which brings us to the single most important section of this post.
 
@@ -119,7 +119,7 @@ $$f_{\mathrm{PLE}} = \frac{[P]}{K_{d,\,\mathrm{ternary}}+[P]} = \frac{\beta}{1+\
 
 This is a Langmuir isotherm in $[P]$ with $K_{d,\mathrm{ternary}}$ as the midpoint. It is the plateau of the Hill curve in $[L]$ — what you reach at saturating compound — and it depends entirely on $\beta$ = $[P]$/$K_{d,\mathrm{ternary}}$. The numbers are unforgiving:
 
-| $\beta$ = $[P]$/$K_{d,\mathrm{ternary}}$ | $f_\mathrm{PLE}$ plateau | Ceiling on $D_{\mathrm{max}}$ from occupancy alone |
+| $\beta$ = $[P]$/$K_{d,\mathrm{ternary}}$ | $f_{\mathrm{PLE}}$ plateau | Ceiling on $D_{\mathrm{max}}$ from occupancy alone |
 |---|---|---|
 | 10 (saturating) | 0.91 | 91% |
 | 3.3 | 0.77 | 77% |
@@ -129,9 +129,9 @@ This is a Langmuir isotherm in $[P]$ with $K_{d,\mathrm{ternary}}$ as the midpoi
 
 These are ceilings from ternary occupancy alone. Actual cellular $D_{\mathrm{max}}$ will be lower still, because resynthesis, incomplete ubiquitination, and inaccessible target pools all multiply down from this starting number.
 
-![Figure 4 — Langmuir isotherm: $f_\mathrm{PLE}$ = $\beta/(1+\beta)$. With $[P]$ held constant, a compound whose $K_{d,\mathrm{ternary}}$ sits far above $[P]$ ($\beta \ll 1$) is structurally capped at low $D_{\mathrm{max}}$; a compound with $K_{d,\mathrm{ternary}}$ comparable to or below $[P]$ plateaus high. A modest $K_{d,\mathrm{ternary}}$ improvement in this regime translates into a large $D_{\mathrm{max}}$ gain without a proportional $\mathrm{DC50}$ shift.](/images/blog/molecular-glue-dc50/fig4_langmuir_isotherm.png)
+![Figure 4 — Langmuir isotherm: $f_{\mathrm{PLE}}$ = $\beta/(1+\beta)$. With $[P]$ held constant, a compound whose $K_{d,\mathrm{ternary}}$ sits far above $[P]$ ($\beta \ll 1$) is structurally capped at low $D_{\mathrm{max}}$; a compound with $K_{d,\mathrm{ternary}}$ comparable to or below $[P]$ plateaus high. A modest $K_{d,\mathrm{ternary}}$ improvement in this regime translates into a large $D_{\mathrm{max}}$ gain without a proportional $\mathrm{DC50}$ shift.](/images/blog/molecular-glue-dc50/fig4_langmuir_isotherm.png)
 
-Apply this to compound 11 vs compound 17. We don't have direct ternary TR-FRET $K_d$ values, but the observed cellular numbers are consistent with compound 11 sitting deep in the sub-saturating regime and compound 17 sitting close to or above saturation. Take a concrete illustration: cellular VAV1 $[P]$ ≈ 50 nM, compound 11 $K_{d,\mathrm{ternary}}$ ≈ 300 nM ($\beta$ ≈ 0.17, $f_\mathrm{PLE}$ plateau ≈ 14%), compound 17 $K_{d,\mathrm{ternary}}$ ≈ 5–10 nM ($\beta$ ≈ 5–10, $f_\mathrm{PLE}$ plateau = 83–91%). Those numbers reproduce the observed $D_{\mathrm{max}}$ almost exactly, and they require nothing beyond the Langmuir shape — no $k_\mathrm{cat}$ differences, no residence time, no downstream magic.
+Apply this to compound 11 vs compound 17. We don't have direct ternary TR-FRET $K_d$ values, but the observed cellular numbers are consistent with compound 11 sitting deep in the sub-saturating regime and compound 17 sitting close to or above saturation. Take a concrete illustration: cellular VAV1 $[P]$ ≈ 50 nM, compound 11 $K_{d,\mathrm{ternary}}$ ≈ 300 nM ($\beta$ ≈ 0.17, $f_{\mathrm{PLE}}$ plateau ≈ 14%), compound 17 $K_{d,\mathrm{ternary}}$ ≈ 5–10 nM ($\beta$ ≈ 5–10, $f_{\mathrm{PLE}}$ plateau = 83–91%). Those numbers reproduce the observed $D_{\mathrm{max}}$ almost exactly, and they require nothing beyond the Langmuir shape — no $k_{\mathrm{cat}}$ differences, no residence time, no downstream magic.
 
 What makes this regime so diagnostically distinctive is that DC50s can still look broadly similar across compounds, even when their $K_{d,\mathrm{ternary}}$ values differ by an order of magnitude. The reason is in the $\mathrm{DC50}$ formula:
 
