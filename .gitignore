@@ -8,7 +8,6 @@ open_chrome.py
 debug_page.py
 test_*.py
 convert_figs.py
-.claude/
 *.TIF
 *.tif
 CV--*.pdf

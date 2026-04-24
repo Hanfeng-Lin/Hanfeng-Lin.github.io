@@ -123,7 +123,7 @@
   /* next/previous buttons */
   &--pager {
     display: block;
-    padding: 1em 2em;
+    padding: 1em 1.5em;
     float: left;
     width: 50%;
     font-family: $sans-serif;
@@ -137,15 +137,18 @@
 
     &:hover {
       color: $link-color-hover;
+      background-color: mix(#fff, $light-gray, 50%);
     }
 
     &:first-child {
+      text-align: left;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
 
     &:last-child {
       margin-left: -1px;
+      text-align: right;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -155,6 +158,30 @@
       pointer-events: none;
       cursor: not-allowed;
     }
+  }
+
+  &__label {
+    display: block;
+    font-size: $type-size-6;
+    font-weight: normal;
+    color: mix(#fff, $gray, 40%);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25em;
+  }
+
+  &__title {
+    display: block;
+    font-size: $type-size-5;
+    font-weight: bold;
+    line-height: 1.3;
+    color: $text-color;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
 

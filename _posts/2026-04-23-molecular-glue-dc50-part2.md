@@ -18,7 +18,7 @@ tags:
 
 ## Opening puzzle: Compound 11 vs Compound 17
 
-Here is the observation that motivates everything in this post. Two VAV1 molecular glues from the NGT-201 series — data and figures throughout this case study are from our [bioRxiv preprint (Wang et al., 2025)](https://www.biorxiv.org/content/10.1101/2025.06.08.658535v2) — differing by a single atom at one position on the phenyl-glutarimide scaffold:
+Here is the observation that motivates everything in this post. Two VAV1 molecular glues from the NGT-201 series — data and figures throughout this case study are from our [bioRxiv preprint (Lin et al., 2025)](https://www.biorxiv.org/content/10.1101/2025.06.08.658535v2) — differing by a single atom at one position on the phenyl-glutarimide scaffold:
 
 - **Compound 11** (X = H): CRBN NanoBRET IC50 = 100 nM. VAV1 $\mathrm{DC50}$: unfittable (curve barely rises). $D\_{\mathrm{max}}$ at 1 μM = **15%**.
 - **Compound 17** (X = Cl): CRBN NanoBRET IC50 = 297 nM. $\log\mathrm{DC50}$ = −7.80 (≈ 16 nM). $D\_{\mathrm{max}}$ at 1 μM = **90%**.
