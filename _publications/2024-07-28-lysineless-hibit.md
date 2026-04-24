@@ -2,7 +2,11 @@
 title: "Lysineless HiBiT and NanoLuc Tagging Systems as Alternative Tools for Monitoring Targeted Protein Degradation"
 collection: publications
 permalink: /publication/2024-07-28-lysineless-hibit
-excerpt: 'Engineered lysineless versions of HiBiT and NanoLuc tags that avoid lysine-mediated false-positive degradation signals in PROTAC and molecular glue assays.'
+excerpt: 'Engineered lysineless versions of HiBiT and NanoLuc tags that avoid lysine-mediated false-positive degradation signals in PROTAC and molecular glue assays.
+
+
+<img src="/publications/2024-lysineless-hibit-graphic-abstract.png">
+'
 date: 2024-07-28
 venue: 'ACS Medicinal Chemistry Letters'
 paperurl: 'https://doi.org/10.1021/acsmedchemlett.4c00270'

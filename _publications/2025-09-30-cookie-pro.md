@@ -2,7 +2,11 @@
 title: "COOKIE-Pro: Covalent Inhibitor Binding Kinetics Profiling on the Proteome Scale"
 collection: publications
 permalink: /publication/2025-09-30-cookie-pro
-excerpt: 'A chemoproteomics method for proteome-wide kinetic profiling of covalent inhibitor binding, integrating mass spectrometry to assess covalent inhibitor binding kinetics (k<sub>inact</sub> and K<sub>I</sub>).'
+excerpt: 'A chemoproteomics method for proteome-wide kinetic profiling of covalent inhibitor binding, integrating mass spectrometry to assess covalent inhibitor binding kinetics (k<sub>inact</sub> and K<sub>I</sub>).
+
+
+<img src="/images/blog/cookie-pro/Figure2.png">
+'
 date: 2025-09-30
 venue: 'Nature Communications'
 paperurl: 'https://www.nature.com/articles/s41467-025-57847-x'
