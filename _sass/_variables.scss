@@ -90,9 +90,9 @@ $xing-color                 : #006567;
 
 
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
+$link-color                 : #0f766e;
+$link-color-hover           : mix(#000, $link-color, 20%);
+$link-color-visited         : mix(#000, $link-color, 5%);
 $masthead-link-color        : $primary-color;
 $masthead-link-color-hover  : mix(#000, $primary-color, 25%);
 
@@ -146,7 +146,7 @@ $susy: (
    Other
    ========================================================================== */
 
-$border-radius              : 8px;
+$border-radius              : 4px;
 $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $navicon-width              : 28px;
 $navicon-height             : 4px;
