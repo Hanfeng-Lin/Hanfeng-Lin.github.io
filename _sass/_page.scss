@@ -24,6 +24,24 @@
 
   .page__inner-wrap {
     @include full();
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(#000, 0.05);
+    padding: 1.5em 1.25em;
+    margin-bottom: 1.5em;
+
+    @include breakpoint($small) {
+      padding: 1.75em 1.5em;
+    }
+
+    @include breakpoint($medium) {
+      padding: 2em;
+    }
+
+    @include breakpoint($large) {
+      padding: 2.5em;
+    }
 
     .page__content,
     .page__meta,
