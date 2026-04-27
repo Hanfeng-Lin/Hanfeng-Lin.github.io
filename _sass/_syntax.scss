@@ -11,26 +11,28 @@ div.highlighter-rouge, figure.highlight {
   background-color: $code-background-color;
   box-shadow: $box-shadow;
 
-  &:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.5em;
-    background-color: $lighter-gray;
-    content: "\f121";
-    font-family: "fontawesome" !important;
-    font-size: $type-size-6;
-    line-height: 1;
-    text-transform: none;
-    speak: none;
-  }
-
   .highlight {
     margin: 0;
     font-family: $monospace;
     font-size: 0.85em;
     line-height: 1.5;
   }
+}
+
+div.highlighter-rouge[data-lang]:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2em 0.7em;
+  font-family: $monospace;
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba($link-color, 0.85);
+  background: rgba($link-color, 0.08);
+  border-radius: 0 $border-radius 0 $border-radius;
+  line-height: 1.6;
+  content: attr(data-lang);
 }
 
 .highlight table td { padding: 5px; }
