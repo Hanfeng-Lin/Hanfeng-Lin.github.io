@@ -105,6 +105,43 @@
   .page__meta {
     margin: 0 0 4px;
   }
+
+  /* card style */
+  .archive__item {
+    margin-bottom: 1.25em;
+    padding: 0.9em 1em;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(#000, 0.05);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+
+    @include breakpoint($small) {
+      padding: 1.1em 1.25em;
+    }
+
+    @include breakpoint($medium) {
+      padding: 1.25em 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    .archive__item-title {
+      margin-top: 0;
+    }
+  }
+
+  /* hover lift only on devices that actually hover (skip touch) */
+  @media (hover: hover) {
+    .archive__item:hover {
+      box-shadow: 0 6px 18px rgba(#000, 0.10);
+      transform: translateY(-2px);
+    }
+  }
 }
 
 
