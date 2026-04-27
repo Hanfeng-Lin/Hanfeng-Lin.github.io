@@ -1,5 +1,5 @@
 ---
-title: '从零搭建一台美国家用 PC 的"回国专线"：Cloudflare DDNS + VLESS REALITY + Sunshine 远程唤醒全记录'
+title: 'Cloudflare DDNS + VLESS REALITY + Sunshine 远程唤醒全记录'
 date: 2026-04-26
 permalink: /posts/2026/04/home-pc-as-china-bridge/
 tags:
