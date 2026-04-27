@@ -1,6 +1,6 @@
 ---
 title: 'Diagnosing Photoshop 2026 Auto-Crash on Windows 11: A Deep Dive'
-date: 2026-04-23
+date: 2026-04-25
 permalink: /posts/2026/04/photoshop-2026-bex64-nvidia-driver/
 tags:
   - Windows
