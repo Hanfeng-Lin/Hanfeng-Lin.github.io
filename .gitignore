@@ -3,6 +3,7 @@ chrome_debug_profile/
 playwright_profile/
 *.json
 *.txt
+!robots.txt
 scrape_*.py
 open_chrome.py
 debug_page.py
