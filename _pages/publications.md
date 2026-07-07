@@ -21,13 +21,3 @@ author_profile: true
 {% for post in rest reversed %}
   {% include archive-single.html %}
 {% endfor %}
-
-
-
-  <script>
-        document.ready = function () {
-            var tree = document.querySelector("#main>.archive article");
-            var child = tree.children[1];
-            tree.removeChild(child);
-        }()
-  </script>
