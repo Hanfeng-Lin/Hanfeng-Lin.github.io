@@ -10,7 +10,7 @@ excerpt: 'A chemoproteomics method for proteome-wide kinetic profiling of covale
 '
 date: 2025-09-30
 venue: 'Nature Communications'
-paperurl: 'https://www.nature.com/articles/s41467-025-57847-x'
+paperurl: 'https://doi.org/10.1038/s41467-025-63491-2'
 citation: '<b>Lin H</b>, Yang B, Ding L, Yang YY, Holt MV, Jung SY, Zhang B, Wang MC, Wang J. (2025). COOKIE-Pro: Covalent Inhibitor Binding Kinetics Profiling on the Proteome Scale. <i>Nature Communications</i>.'
 tags:
   - Chemoproteomics
@@ -25,4 +25,4 @@ Developed the COOKIE-Pro method for proteome-wide kinetic profiling of covalent 
 
 ![Figure 2](/images/blog/cookie-pro/Figure2.png)
 
-[View paper](https://www.nature.com/articles/s41467-025-57847-x)
+[View paper](https://doi.org/10.1038/s41467-025-63491-2)
