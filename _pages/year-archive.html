@@ -8,12 +8,109 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+<style>
+  .tag-filter { display:flex; flex-wrap:wrap; gap:.45em; margin:.2em 0 1.4em; align-items:center; }
+  .tag-btn {
+    cursor:pointer; border:1px solid #d3d3d3; background:#f6f6f6; color:#3a3a3a;
+    border-radius:999px; padding:.22em .8em; font-size:.8em; line-height:1.5;
+    transition:background .15s, border-color .15s, color .15s;
+  }
+  .tag-btn:hover { border-color:#8a8a8a; }
+  .tag-btn.active { background:#3d4a54; border-color:#3d4a54; color:#fff; }
+  .tag-count { opacity:.55; font-size:.9em; margin-left:.2em; }
+  .tag-btn.active .tag-count { opacity:.8; }
+  .tag-more { background:none; border-style:dashed; color:#666; }
+  #tagCount { font-size:.85em; color:#777; margin:-.6em 0 1.2em; }
+</style>
+
+{% comment %} Build a frequency-sorted tag list: "0022~Tag" strings, sorted desc {% endcomment %}
+{% assign tag_pairs = "" %}
+{% for t in site.tags %}
+  {% assign n = t[1] | size %}
+  {% assign pad = n | prepend: "000" | slice: -4, 4 %}
+  {% assign tag_pairs = tag_pairs | append: pad | append: "~" | append: t[0] | append: "::" %}
+{% endfor %}
+{% assign tag_sorted = tag_pairs | split: "::" | sort | reverse %}
+
+<div class="tag-filter" id="tagFilter">
+  <button type="button" class="tag-btn active" data-tag="__all__">All</button>
+  {% for pair in tag_sorted %}
+    {% unless pair contains "~" %}{% continue %}{% endunless %}
+    {% assign cnt = pair | split: "~" | first | times: 1 %}
+    {% assign name = pair | split: "~" | last %}
+    {% if cnt >= 2 %}
+      <button type="button" class="tag-btn" data-tag="{{ name }}">{{ name }}<span class="tag-count">{{ cnt }}</span></button>
+    {% else %}
+      <button type="button" class="tag-btn tag-extra" data-tag="{{ name }}" style="display:none">{{ name }}<span class="tag-count">{{ cnt }}</span></button>
+    {% endif %}
+  {% endfor %}
+  <button type="button" class="tag-btn tag-more" id="tagMore">＋ more tags…</button>
+</div>
+<p id="tagCount"></p>
+
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    <h2 id="{{ year | slugify }}" class="archive__subtitle blog-year">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+  <div class="fpost" data-tags="{{ post.tags | join: '||' }}">
+    {% include archive-single.html %}
+  </div>
 {% endfor %}
+
+<script>
+(function () {
+  var filter = document.getElementById('tagFilter');
+  if (!filter) return;
+  var countEl = document.getElementById('tagCount');
+  var btns = filter.querySelectorAll('.tag-btn');
+  var posts = document.querySelectorAll('.fpost');
+  var years = document.querySelectorAll('.blog-year');
+  var active = new Set();
+
+  function apply() {
+    var shown = 0;
+    posts.forEach(function (p) {
+      var tags = (p.getAttribute('data-tags') || '').split('||');
+      var show = active.size === 0 || tags.some(function (t) { return active.has(t); });
+      p.style.display = show ? '' : 'none';
+      if (show) shown++;
+    });
+    years.forEach(function (h) {
+      var vis = false, el = h.nextElementSibling;
+      while (el && !el.classList.contains('blog-year')) {
+        if (el.classList.contains('fpost') && el.style.display !== 'none') { vis = true; break; }
+        el = el.nextElementSibling;
+      }
+      h.style.display = vis ? '' : 'none';
+    });
+    if (countEl) {
+      countEl.textContent = active.size === 0 ? '' :
+        'Showing ' + shown + ' post' + (shown === 1 ? '' : 's') +
+        ' tagged: ' + Array.from(active).join(', ');
+    }
+  }
+
+  filter.addEventListener('click', function (e) {
+    if (e.target.closest('#tagMore')) {
+      filter.querySelectorAll('.tag-extra').forEach(function (x) { x.style.display = ''; });
+      e.target.closest('#tagMore').style.display = 'none';
+      return;
+    }
+    var b = e.target.closest('.tag-btn');
+    if (!b) return;
+    var tag = b.getAttribute('data-tag');
+    if (tag === '__all__') { active.clear(); }
+    else if (active.has(tag)) { active.delete(tag); }
+    else { active.add(tag); }
+    btns.forEach(function (x) {
+      var t = x.getAttribute('data-tag');
+      if (t) x.classList.toggle('active', t === '__all__' ? active.size === 0 : active.has(t));
+    });
+    apply();
+  });
+})();
+</script>
