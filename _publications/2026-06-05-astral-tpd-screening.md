@@ -14,4 +14,6 @@ tags:
   - High-Throughput Screening
 ---
 
+![Graphical Abstract](/publications/2026-astral-tpd-screening-toc.png)
+
 [View paper](https://doi.org/10.1021/acs.jproteome.5c01023)
