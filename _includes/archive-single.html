@@ -33,7 +33,22 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    
+
+    {% if post.collection == 'publications' %}
+      {% capture pub_html %}{{ post.excerpt | markdownify }}{{ post.content | markdownify }}{% endcapture %}
+      {% assign pub_img_split = pub_html | split: '<img' %}
+      {% if pub_img_split.size > 1 %}
+        {% assign pub_src_split = pub_img_split[1] | split: 'src="' %}
+        {% assign pub_thumb = pub_src_split[1] | split: '"' | first %}
+        {% if pub_thumb and pub_thumb != '' %}
+          <a href="{{ base_path }}{{ post.url }}" class="archive__item-thumb" aria-label="{{ title | strip_html }}">
+            <img src="{{ pub_thumb }}" alt="{{ title | strip_html | escape }}" loading="lazy"
+                 style="display:block; max-width:100%; max-height:170px; width:auto; margin:0.3em 0 0.6em; border:1px solid #e8e8e8; border-radius:4px;">
+          </a>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
