@@ -96,6 +96,34 @@ and that ensemble is wildly different at the two ends of the cycle:
 - **在复合物里**，界面已经把相对取向钉住了。角度分布很窄，由蛋白-蛋白接触和胶共同塑造，没有闭式解，只能数值地算——这正是那五段串行 Boresch US（270 ns）存在的理由。
 - **在远距离分离时**，两个蛋白不再相互作用，相对取向是**各向同性**的：在完整的 8π² 取向空间上均匀分布。这个分布由几何完全确定，于是代价退化成只含力常数、参考角度（通过 sin θ₀ 的雅可比因子）和标准态体积的闭式解。不需要模拟，论文也确实没跑：方法部分里没有任何自由态的取向伞形采样。
 
+**What the closed form actually is / 闭式解长什么样.** For the three coordinates that describe the ligand protein's own orientation (θ_B, φ_B, φ_C), the paper's eq 1 gives
+
+对于描述配体蛋白自身取向的那三个坐标（θ_B、φ_B、φ_C），论文的式 (1) 给出：
+
+$$e^{-\beta \Delta G_o^{bulk}} = \frac{1}{8\pi^2}\sin\theta_{B,0}\left(\frac{2\pi}{\beta K_{\theta_B}}\right)^{1/2}\left(\frac{2\pi}{\beta K_{\phi_B}}\right)^{1/2}\left(\frac{2\pi}{\beta K_{\phi_C}}\right)^{1/2}$$
+
+Every piece has a plain reading. Each $(2\pi/\beta K)^{1/2}$ is the **effective width of one harmonic well** — the Gaussian integral of that restraint. Their product is the sliver of orientational space the restraint still allows. The $\sin\theta_{B,0}$ is the Jacobian for a polar angle. And $8\pi^2$ is the **total orientational volume** of a rigid body. So the whole right-hand side is simply
+
+每一项都有直白的解释。每个 $(2\pi/\beta K)^{1/2}$ 是**一个谐振子阱的有效宽度**，即该限制势的高斯积分。三者相乘，就是限制之后仍然允许的那一小片取向空间。$\sin\theta_{B,0}$ 是极角的雅可比因子。而 $8\pi^2$ 是刚体的**全部取向体积**。所以整个右边其实就是：
+
+$$e^{-\beta \Delta G_o^{bulk}} = \frac{\text{orientational volume left by the restraints}}{\text{full isotropic volume } 8\pi^2}$$
+
+a **ratio of volumes in orientation space**, and its logarithm is an entropy. With the paper's orientational force constant of 200 kcal mol⁻¹ rad⁻², each well is about 7.8° wide, the ratio is roughly 3 × 10⁻⁵, and the term comes to about **+6 kcal/mol** at 300 K. That is the scale of the rotational entropy being accounted for. (That arithmetic is mine, taking sin θ_B,0 ≈ 1.)
+
+这是一个**取向空间里的体积之比**，取对数就是熵。按论文用的取向力常数 200 kcal mol⁻¹ rad⁻²，每个阱约 7.8° 宽，这个比值约为 3 × 10⁻⁵，在 300 K 下该项约为 **+6 kcal/mol**。这就是被结算的转动熵的量级。（这步算术是我自己算的，取 sin θ_B,0 ≈ 1。）
+
+The other three coordinates are not orientation but **position**: where the ligand protein sits relative to the receptor frame. The radial one is the separation PMF itself, entering through $I^* = \int dr\, e^{-\beta[W(r)-W(r^*)]}$, and the two angular ones are released alongside the spherical-shell Jacobian. Putting them together, the paper's standard-state correction is
+
+另外三个坐标描述的不是取向而是**位置**：配体蛋白相对于受体坐标系待在哪里。径向那个就是分离 PMF 本身，通过 $I^* = \int dr\, e^{-\beta[W(r)-W(r^*)]}$ 进入；另外两个角度坐标连同球壳的雅可比因子一起释放。合起来，论文的标准态修正是：
+
+$$\Delta G_{corr} = -\frac{1}{\beta}\ln\left[(r^*)^2 \sin\theta_{A,0}\left(\frac{2\pi}{\beta K_{\theta_A}}\right)^{1/2}\left(\frac{2\pi}{\beta K_{\phi_A}}\right)^{1/2}\frac{e^{-\beta \Delta G_o^{bulk}}}{4\pi (r^\circ)^2}\right]$$
+
+$$\Delta G_{sep} = -\frac{1}{\beta}\ln\left(\frac{3}{r^\circ}I^*\right)$$
+
+where $r^\circ$ is the "standard state length" defined by $1/C^\circ = \frac{4}{3}\pi (r^\circ)^3$, i.e. about 7.35 Å for a 1 M standard state. The factor of 3 in ΔG_sep and the $4\pi(r^\circ)^2$ in ΔG_corr are two halves of the same thing: multiply them out and you get $3/[4\pi(r^\circ)^3] = C^\circ$. **The standard state enters nowhere else.**
+
+其中 $r^\circ$ 是"标准态长度"，由 $1/C^\circ = \frac{4}{3}\pi (r^\circ)^3$ 定义，对应 1 M 标准态约为 7.35 Å。ΔG_sep 里的那个 3 和 ΔG_corr 里的 $4\pi(r^\circ)^2$ 是同一件事的两半：乘开来正好是 $3/[4\pi(r^\circ)^3] = C^\circ$。**标准态只从这里进入，别无他处。**
+
 So they are **not** equivalent, and crucially they must not be. Squeezing an isotropic distribution into a narrow harmonic well is expensive; squeezing an already-narrow one is cheap. **That gap is the rotational entropy the complex gave up on binding**, and it is referenced to the standard state. If the two sides cancelled, the cycle would return no standard-state binding free energy at all. The asymmetry is the point: ΔG_o,bound is subtracted and computed by simulation, ΔG_corr is added and computed analytically.
 
 所以它们**不等价**，而且关键在于它们绝不能等价。把各向同性的分布压进一个窄谐振子阱里很贵，把本来就很窄的分布再压一下很便宜。**这个差额就是复合物在结合时交出去的转动熵**，并且是相对标准态定义的。如果两边抵消了，整个循环就根本给不出标准态结合自由能。这种不对称正是要点所在：ΔG_o,bound 是减去的、靠模拟算；ΔG_corr 是加上的、靠解析算。
