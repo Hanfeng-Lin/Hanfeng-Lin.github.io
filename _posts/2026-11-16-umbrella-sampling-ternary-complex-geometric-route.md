@@ -82,7 +82,23 @@ Three implementation details carry most of the real weight; skipping any of them
 
 有三个实现细节承担了大部分真实工作量，复现时跳过任何一个都会翻车。
 
-![Figure 3 — The Boresch restraint scheme. Six anchor points (three per protein) define two angles and three dihedrals; restraining all five, plus the Cα RMSD of each protein, leaves the interface centre-of-mass separation r as the single sampled coordinate. Anchors b, c, B and C are chosen at local minima of the RMSF plot so that the restrained angles are built on rigid parts of the structure.](/images/blog/us-ternary-geometric-route/fig3_boresch_anchors.png)
+![Figure 3 — The Boresch restraint scheme, with the restrained coordinates marked where they actually live. The two angles (purple arcs) sit at their vertex atoms a and A; the three dihedrals (orange rings) are drawn as rotations about the bond each one twists around. Restraining all five, plus the Cα RMSD of each protein, leaves the interface centre-of-mass separation r as the single sampled coordinate. Anchors b, c, B and C are chosen at local minima of the RMSF plot so that the restrained angles are built on rigid parts of the structure.](/images/blog/us-ternary-geometric-route/fig3_boresch_anchors.png)
+
+**The five restrained coordinates / 被限制的五个坐标.** Label the anchors a, b, c in the glue-bound receptor and A, B, C in the ligand protein. The restrained degrees of freedom are then the two angles
+
+把带胶受体一侧的锚点记为 a、b、c，配体蛋白一侧记为 A、B、C，被限制的自由度就是两个角
+
+$$\theta_A = \angle(b,a,A), \qquad \theta_B = \angle(a,A,B)$$
+
+and the three dihedrals
+
+和三个二面角
+
+$$\phi_A = (c,b,a,A), \qquad \phi_B = (b,a,A,B), \qquad \phi_C = (a,A,B,C)$$
+
+Each dihedral is a rotation about the bond at its centre, which is why Figure 3 draws them as rings around those bonds: φ_A twists about b–a, φ_B about a–A, and φ_C about A–B. Note that **φ_B twists about the very axis the proteins are later pulled apart along** — the separation r = a–A is the one coordinate among the six left free to move.
+
+每个二面角都是绕它中间那根键的转动，所以图 3 把它们画成套在相应键上的圆环：φ_A 绕 b–a，φ_B 绕 a–A，φ_C 绕 A–B。注意 **φ_B 绕的正是后面把两个蛋白拉开所沿的那条轴**——六个坐标里，只有分离坐标 r = a–A 被留着自由活动。
 
 **Anchor selection / 锚点选择.** The Boresch scheme needs six anchors: three in the glue-bound receptor, three in the ligand protein. An anchor on a floppy loop makes the restrained angles meaningless. The authors run 100 ns of unrestrained MD in triplicate, compute **RMSF**, and pick anchors at **local minima of the RMSF plot** that are also non-collinear. The two interface centres of mass are the "bonded" pair that defines the separation coordinate. Equilibration is detected automatically with White's marginal standard error rule (the RED package), not by eye.
 
