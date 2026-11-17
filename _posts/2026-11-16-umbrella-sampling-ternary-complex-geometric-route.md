@@ -180,13 +180,67 @@ Three caveats stated plainly in the paper:
 | One result is suspicious / 有一个结果可疑 | BRD3(E344G) came out 7.7 kcal/mol **more** stable than BRD4 with no experimental support — probably because the BRD4 complex was used as the starting structure for both / BRD3(E344G) 比 BRD4 还稳 7.7 kcal/mol，无实验支持，很可能因为两者都用 BRD4 复合物当起始结构 |
 | Stability ≠ degradation / 稳定性 ≠ 降解 | Interface stability is necessary but not sufficient; lysine accessibility for ubiquitination is not modelled at all / 界面稳定是必要非充分条件；泛素化所需的赖氨酸可及性完全未建模 |
 
-**Cost / 代价.** One replicate of the full cycle is **~2 μs of simulation**, i.e. weeks on a single GPU at 120–300 ns/day. The windows are embarrassingly parallel, so with enough GPUs it is hours — but this is a late-stage filter, not a screening method. The authors point to Hamiltonian replica exchange inside the US windows as the obvious next accelerator, aimed at the slow separation CV.
+---
 
-**代价。** 完整循环跑一个重复约需 **2 μs 模拟**，按 120–300 ns/天算，单卡要几周。窗口之间完全并行，卡够多就是几小时——但这注定是筛选末端的精筛工具，不是筛选方法本身。作者指出的下一步加速是在 US 窗口里上 Hamiltonian replica exchange，专门针对收敛最慢的分离 CV。
+## 8. What it actually costs / 这套东西到底要多少算力
+
+The paper quotes two numbers: roughly **2 μs of simulation per replicate**, at **120–300 ns/day** on a high-end consumer GPU. The Methods give the window counts and per-window sampling times, so the bill can be itemised.
+
+论文给了两个数字：每个重复大约 **2 μs 模拟**，在高端消费级 GPU 上跑 **120–300 ns/天**。方法部分给出了每个阶段的窗口数和每窗采样时间，所以这笔账可以逐项拆开。
+
+> The breakdown and the scaling analysis below are **my own arithmetic on the published window counts**, not figures quoted from the paper. They land at 2.25 μs, which is consistent with the paper's "approximately 2 μs". / 下面的拆分和扩展性分析是**我按论文给的窗口数自己算的**，不是论文原文给出的数字。算出来 2.25 μs，与论文说的"约 2 μs"吻合。
+
+![Figure 6 — Cost of one geometric-route binding free energy. (A) Where the 2.25 μs of a single replicate goes, by stage. The separation PMF alone is 45% of the budget. (B) Wall clock against the number of GPUs running windows concurrently, at 200 ns/day. Perfect scaling (dashed) would keep falling, but the protocol has a serial chain: the bound-state RMSD stages, the five Boresch stages, the steered MD and the separation PMF each depend on the previous one's result, which puts a floor of roughly half a day on time-to-answer no matter how much hardware is available.](/images/blog/us-ternary-geometric-route/fig6_cost.png)
+
+### Where the microseconds go / 时间花在哪
+
+| Stage / 阶段 | Windows / 窗口 | Per window / 每窗 | Total / 小计 |
+|---|---|---|---|
+| Separation PMF / 分离 PMF | 34 | 30 ns | **1020 ns (45%)** |
+| Bound-state RMSD / 结合态 RMSD | 2 CVs × 12 | 20 ns | 480 ns (21%) |
+| Bulk-state RMSD / 自由态 RMSD | 2 CVs × 12 | 20 ns | 480 ns (21%) |
+| Boresch orientational / 取向限制 | 5 DoF × 9 | 6 ns | 270 ns (12%) |
+| Steered MD / 牵引 MD | 1 | 2.2 ns | 2 ns |
+| **Per replicate / 每个重复** | | | **≈ 2.25 μs** |
+
+Two things stand out. First, **the separation PMF is nearly half the bill — and it is also the stage that converges worst** (only 31 of 42 replicates reached sub-1 kcal/mol forward/reverse agreement). The money goes exactly where the trouble is. Second, the **RMSD stages together cost as much as the separation**, which is easy to forget because they feel like bookkeeping rather than physics.
+
+两点值得注意。第一，**分离 PMF 占了将近一半开销，而它恰恰也是最难收敛的阶段**（42 次重复里只有 31 次达到正反向 1 kcal/mol 以内）。钱正好烧在最麻烦的地方。第二，**两组 RMSD 阶段加起来和分离阶段一样贵**，这点很容易被忽略，因为它们感觉像"记账"而不像"物理"。
+
+### Scaling up / 放大到整个工作量
+
+Everything is run in triplicate, so one system is about **6.8 μs**. The paper covers 14 systems, which puts the whole campaign near **95 μs of sampling** — on the order of **315–790 GPU-days** depending on where you sit in the 120–300 ns/day band. The dual-bromodomain systems cost more still, because splitting the RMSD CV adds a third restrained domain per state and pushes a replicate to roughly 2.7 μs.
+
+所有计算都是三重复，所以**一个体系约 6.8 μs**。论文做了 14 个体系，整个工作量接近 **95 μs 采样**——按 120–300 ns/天折算，大约是 **315–790 GPU-天**。双 bromodomain 体系还要更贵，因为拆分 RMSD CV 使每个状态多出一个受限结构域，单个重复涨到约 2.7 μs。
+
+For contrast, the MM/GBSA and docking comparisons in the same paper ride on the **100 ns** of unrestrained MD per replicate — about twenty times cheaper. That ratio is the whole story of the paper: the cheap methods miss a single interfacial glycine, and the expensive one does not.
+
+作为对照，同一篇论文里的 MM/GBSA 和对接打分都建立在每个重复 **100 ns** 的无限制 MD 之上——便宜大约二十倍。这个比例就是全文的故事：便宜的方法看不见那一个界面甘氨酸，贵的看得见。
+
+### Parallelism has a floor / 并行是有下限的
+
+US windows are independent, so the obvious move is to run them all at once. The paper notes that with enough GPUs the time to answer drops to a few hours. That is true of the **arithmetic**, but the protocol also has a **serial chain** that no amount of hardware removes:
+
+US 窗口彼此独立，所以显然的做法是一次全部铺开。论文提到卡够多时出结果可以降到几小时。这在**算术上**成立，但协议里还有一条**串行链**，再多硬件也消不掉：
+
+```
+bound RMSD (2 stages, in order)  →  Boresch (5 stages, each reading the
+结合态 RMSD（两步，有先后）           previous PMF's minimum / 每步读上一步 PMF 的极小)
+        →  steered MD  →  separation US
+           牵引 MD         分离 US
+```
+
+The five Boresch stages **cannot** be run concurrently: θ_B is sampled with the θ_A restraint already in place, and each stage's equilibrium value is read off the previous stage's PMF. The separation windows need those equilibrium values before they can start, and the steered MD that seeds them needs them too. Adding up the stages on that chain gives roughly **102 ns of unavoidably serial sampling**, or **0.3–0.9 days**, before counting the 100 ns of setup MD. The widest stage is the separation PMF at 34 windows, so past about 34 GPUs extra hardware buys nothing.
+
+五个 Boresch 阶段**不能**并行：θ_B 是在 θ_A 限制已经就位的条件下采样的，而且每一步的平衡值都要读上一步 PMF 的极小。分离窗口必须先拿到这些平衡值才能开跑，给它们提供起始构型的牵引 MD 同样如此。把这条链上的阶段加起来，约有 **102 ns 无法并行的串行采样**，即 **0.3–0.9 天**，这还没算 100 ns 的前期准备 MD。最宽的阶段是 34 个窗口的分离 PMF，所以超过约 34 块卡之后，再加硬件也买不到任何东西。
+
+The practical reading: **this is a late-stage filter, not a screening method.** It is for the handful of complexes you already believe in, after docking and ML have done the winnowing. The authors' own suggested accelerator — Hamiltonian replica exchange inside the US windows — is aimed squarely at the separation CV, which is both the most expensive line item and the worst-converging one.
+
+实际结论：**这是筛选末端的精筛工具，不是筛选方法本身。** 它适用于对接和机器学习筛完之后、你已经相信的那少数几个复合物。作者自己提出的加速办法——在 US 窗口里上 Hamiltonian replica exchange——正是冲着分离 CV 去的，而那既是最贵的一项，也是最难收敛的一项。
 
 ---
 
-## 8. Reading it next to the alchemical notes / 和前两篇笔记放在一起看
+## 9. Reading it next to the alchemical notes / 和前两篇笔记放在一起看
 
 | | Alchemical (AQFEP / FEP) / 炼金术 | Geometric route + US / 几何路径 |
 |---|---|---|

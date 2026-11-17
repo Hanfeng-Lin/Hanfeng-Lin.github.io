@@ -402,10 +402,85 @@ def fig5_results():
     plt.close(fig)
 
 
+# ---------------------------------------------------------------- figure 6
+# Window counts and per-window sampling times are read off the paper's
+# Methods; the totals below are my own arithmetic on those numbers.
+RMSD_WIN, BOR_WIN, SEP_WIN = 12, 9, 34
+STAGES = [
+    ("Separation PMF\n34 windows x 30 ns", SEP_WIN * 30, "#C0392B"),
+    ("Bound-state RMSD\n2 CVs x 12 x 20 ns", 2 * RMSD_WIN * 20, "#4C86C6"),
+    ("Bulk-state RMSD\n2 CVs x 12 x 20 ns", 2 * RMSD_WIN * 20, "#7FB3E0"),
+    ("Boresch orientational\n5 DoF x 9 x 6 ns", 5 * BOR_WIN * 6, "#8E44AD"),
+    ("Steered MD (setup)", 2.2, "#8A8A8A"),
+]
+TOTAL = sum(v for _, v, _ in STAGES)
+CRITICAL = 2 * 20 + 5 * 6 + 2.2 + 30   # stages that cannot be parallelised
+
+
+def fig6_cost():
+    fig, axes = plt.subplots(1, 2, figsize=(11.0, 4.5))
+
+    # --- (A) where the microseconds go
+    ax = axes[0]
+    labels = [s[0] for s in STAGES]
+    vals = [s[1] for s in STAGES]
+    cols = [s[2] for s in STAGES]
+    y = np.arange(len(vals))[::-1]
+    ax.barh(y, vals, color=cols, height=0.62, edgecolor="black", lw=0.7)
+    for yi, v in zip(y, vals):
+        ax.text(v + 22, yi, "%d ns  (%.0f%%)" % (v, 100 * v / TOTAL),
+                va="center", fontsize=9, fontweight="bold")
+    ax.set_yticks(y)
+    ax.set_yticklabels(labels, fontsize=8.5)
+    ax.set_xlim(0, 1320)
+    ax.set_xlabel("simulation time per replicate / ns")
+    ax.set_title("(A) One replicate of the cycle = %.2f $\\mu$s" % (TOTAL / 1000),
+                 fontsize=10.5, fontweight="bold")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    # --- (B) wall clock vs how many GPUs you throw at it
+    ax = axes[1]
+    rate = 200.0           # ns/day, midpoint of the quoted 120-300
+    n = np.arange(1, 160)
+    ideal = TOTAL / (n * rate)
+    floor = CRITICAL / rate
+    real = np.maximum(ideal, floor)
+
+    ax.loglog(n, ideal, color=C_GREY, lw=1.4, ls="--",
+              label="perfect scaling")
+    ax.loglog(n, real, color=C_GOOD, lw=2.2, label="with the serial chain")
+    ax.axhline(floor, color=C_BAD, lw=1.2, ls=":")
+    ax.text(1.15, floor * 0.66,
+            "floor %.1f days: bound RMSD $\\rightarrow$ Boresch\n"
+            "$\\rightarrow$ SMD $\\rightarrow$ separation run in order" % floor,
+            fontsize=8.5, color=C_BAD, va="top")
+    ax.plot([SEP_WIN], [max(TOTAL / (SEP_WIN * rate), floor)], marker="o",
+            ms=7, color=C_GOOD, zorder=5)
+    ax.annotate("34 GPUs = widest\nstage (separation)",
+                xy=(SEP_WIN, max(TOTAL / (SEP_WIN * rate), floor)),
+                xytext=(46, 3.2), fontsize=8.5, color=C_GOOD,
+                arrowprops=dict(arrowstyle="->", color=C_GOOD, lw=1.0))
+    ax.set_xlabel("GPUs running windows concurrently")
+    ax.set_ylabel("wall clock / days")
+    ax.set_title("(B) Throwing GPUs at it stops helping",
+                 fontsize=10.5, fontweight="bold")
+    ax.legend(frameon=False, fontsize=8.5, loc="upper right")
+    ax.grid(alpha=0.25, which="both", lw=0.5)
+
+    fig.suptitle("Cost of one geometric-route binding free energy "
+                 "(at 120-300 ns/day per GPU)",
+                 fontsize=11.5, fontweight="bold", y=1.02)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "fig6_cost.png"))
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig1_path_problem()
     fig2_thermo_cycle()
     fig3_boresch()
     fig4_cv_splitting()
     fig5_results()
+    fig6_cost()
     print("wrote:", sorted(os.listdir(OUT)))
