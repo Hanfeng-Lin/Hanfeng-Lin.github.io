@@ -6,7 +6,7 @@ excerpt: 'A series of CRBN molecular glues that selectively degrade VAV1 through
 date: 2026-09-12
 venue: 'Nature Communications'
 paperurl: 'https://doi.org/10.1038/s41467-026-77657-z'
-citation: '<b>Lin H</b><sup>†</sup>, Yu X<sup>†</sup>, Zheng H<sup>†</sup>, Cheng R, Zhang M, Qi X, Yang YY, Zhou S, Qi R, Le L, Bortolato A, Yesylevskyy S, Nafiiev A, Che X, Wang J. (2026). Leveraging high-throughput proteomics and AI-based protein folding to accelerate VAV1 molecular glue discovery. <i>Nature Communications</i>, <b>17</b>, 10763. (<sup>†</sup>These authors contributed equally)'
+citation: '<b>Lin H</b><sup>†</sup>, Yu X<sup>†</sup>, Zheng H<sup>†</sup>, Cheng R, Zhang M, Qi X, Yang YY, Zhou S, Qi R, Le L, Bortolato A, Yesylevskyy S, Nafiiev A, Che X, Wang J. (2026). Leveraging high-throughput proteomics and AI-based protein folding to accelerate VAV1 molecular glue discovery. <i>Nat Commun</i>, <b>17</b>, 10763. (<sup>†</sup>These authors contributed equally)'
 tags:
   - Molecular Glue
   - Targeted Protein Degradation

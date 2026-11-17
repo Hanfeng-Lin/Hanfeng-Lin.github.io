@@ -6,7 +6,7 @@ excerpt: 'Cryo-EM structures of the <i>Enterococcus faecalis</i> Cas9-Csn2-Cas1-
 date: 2026-03-05
 venue: 'Molecular Cell'
 paperurl: 'https://doi.org/10.1016/j.molcel.2026.01.024'
-citation: 'Li Z, Li Y, Kong J, Wu Q, Huang P, Zhang Y, Wu W, Chen M, Liu Y, <b>Lin HF</b>, et al. (2026). Structural basis for Cas9-directed spacer acquisition in type II-A CRISPR-Cas systems. <i>Mol Cell</i>, <b>86</b>(5), 805–816.e4.'
+citation: 'Li Z, Li Y, Kong J, Wu Q, Huang P, Zhang Y, Wu W, Chen M, Liu Y, <b>Lin H</b>, et al. (2026). Structural basis for Cas9-directed spacer acquisition in type II-A CRISPR-Cas systems. <i>Mol Cell</i>, <b>86</b>(5), 805–816.e4.'
 tags:
   - CRISPR-Cas
   - Structural Biology

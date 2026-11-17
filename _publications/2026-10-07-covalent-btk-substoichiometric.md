@@ -8,7 +8,7 @@ excerpt: 'PSIRC3, an irreversible covalent BTK PROTAC, degrades BTK with a sub-n
 date: 2026-10-07
 venue: 'Nature Communications'
 paperurl: 'https://doi.org/10.1038/s41467-026-78239-9'
-citation: 'Cheng R<sup>†</sup>, <b>Lin H</b><sup>†</sup>, Yu X, Misra S, Mitchell AD, Woyach JA, Qi X, Wang J. (2026). Sub-stoichiometric degradation is dispensable for potent PROTACs as demonstrated by irreversible covalent BTK degraders. <i>Nature Communications</i>, <b>17</b>, 11429. (<sup>†</sup>These authors contributed equally)'
+citation: 'Cheng R<sup>†</sup>, <b>Lin H</b><sup>†</sup>, Yu X, Misra S, Mitchell AD, Woyach JA, Qi X, Wang J. (2026). Sub-stoichiometric degradation is dispensable for potent PROTACs as demonstrated by irreversible covalent BTK degraders. <i>Nat Commun</i>, <b>17</b>, 11429. (<sup>†</sup>These authors contributed equally)'
 tags:
   - PROTAC
   - Covalent Drug Design

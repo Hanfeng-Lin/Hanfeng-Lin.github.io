@@ -3,9 +3,6 @@ title: "Glutathione Dynamics in Subcellular Compartments and Implications for Dr
 collection: publications
 permalink: /publication/2024-07-24-glutathione-dynamics
 excerpt: 'A review of compartment-specific glutathione biology and its relevance to covalent drug design and redox-based therapeutic strategies.
-
-
-<img src="/publications/2024-glutathione-dynamics-fig2.png">
 '
 date: 2024-07-24
 venue: 'Current Opinion in Chemical Biology'
