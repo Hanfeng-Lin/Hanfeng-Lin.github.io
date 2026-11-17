@@ -74,6 +74,48 @@ $$\Delta G_{bind} = \Delta G_{sep} + \Delta G_{c,bulk} - \Delta G_{c,bound} - \D
 
 > **One-sentence version / 一句话版本:** you don't make the path complete — you make it **narrow enough to be the only path**, then analytically refund everything you forbade. / 你不是把路径变完备，而是把它**收窄到只剩这一条**，再把禁止掉的东西解析地退还。
 
+### Are the restraints at the two ends equivalent? / 两端的限制等价吗？
+
+This is the question that decides whether the cycle means anything, and the answer is different for the two kinds of restraint.
+
+这个问题决定了整个循环有没有意义，而两类限制的答案并不相同。
+
+**The orientational restraints: same potential, different price / 取向限制：势函数相同，代价不同.** The Boresch potential applied in the bound state and the one released in the separated state are *literally the same function* — same five coordinates, same force constants, same reference values. What differs is what it costs, because the free energy of imposing a restraint is an average over the **unrestrained** ensemble,
+
+结合态施加的 Boresch 势，和分离态松开的那个，**是同一个函数**——同样五个坐标、同样的力常数、同样的参考值。不同的是它的代价，因为施加限制的自由能是对**未受限**系综求的平均：
+
+$$\Delta G_{\text{restraint}} = -k_BT \ln \left\langle e^{-\beta u(\Omega)} \right\rangle_{\text{unrestrained}}$$
+
+and that ensemble is wildly different at the two ends of the cycle:
+
+而循环两端的这个系综差别极大：
+
+- **In the complex / 在复合物里**, the interface already pins the relative orientation. The angular distribution is narrow and is shaped by the protein–protein contacts and the glue. It has no closed form, so it must be computed numerically — this is exactly what the five sequential Boresch US stages (270 ns) are for.
+- **At large separation / 在远距离分离时**, the two proteins no longer interact, so the relative orientation is **isotropic**: uniform over the full 8π² of orientational space. That distribution is known exactly from geometry, so the cost collapses to a closed form in the force constants, the reference angles (through their sin θ₀ Jacobian factors) and the standard-state volume. No simulation needed, and the paper runs none: there is no bulk-state orientational umbrella sampling anywhere in the Methods.
+
+- **在复合物里**，界面已经把相对取向钉住了。角度分布很窄，由蛋白-蛋白接触和胶共同塑造，没有闭式解，只能数值地算——这正是那五段串行 Boresch US（270 ns）存在的理由。
+- **在远距离分离时**，两个蛋白不再相互作用，相对取向是**各向同性**的：在完整的 8π² 取向空间上均匀分布。这个分布由几何完全确定，于是代价退化成只含力常数、参考角度（通过 sin θ₀ 的雅可比因子）和标准态体积的闭式解。不需要模拟，论文也确实没跑：方法部分里没有任何自由态的取向伞形采样。
+
+So they are **not** equivalent, and crucially they must not be. Squeezing an isotropic distribution into a narrow harmonic well is expensive; squeezing an already-narrow one is cheap. **That gap is the rotational entropy the complex gave up on binding**, and it is referenced to the standard state. If the two sides cancelled, the cycle would return no standard-state binding free energy at all. The asymmetry is the point: ΔG_o,bound is subtracted and computed by simulation, ΔG_corr is added and computed analytically.
+
+所以它们**不等价**，而且关键在于它们绝不能等价。把各向同性的分布压进一个窄谐振子阱里很贵，把本来就很窄的分布再压一下很便宜。**这个差额就是复合物在结合时交出去的转动熵**，并且是相对标准态定义的。如果两边抵消了，整个循环就根本给不出标准态结合自由能。这种不对称正是要点所在：ΔG_o,bound 是减去的、靠模拟算；ΔG_corr 是加上的、靠解析算。
+
+**A practical corollary / 一个实际推论.** The analytic refund is only valid where isotropy actually holds. Release the orientational restraints too early, while residual interactions still bias the relative orientation, and the closed form is simply wrong. This is part of why the separation PMF is pushed out to 30 Å rather than stopped as soon as it looks flat.
+
+**解析的"退款"只在各向同性真正成立的地方才有效。** 如果松得太早、残余相互作用还在偏置相对取向，那个闭式解就是错的。这也是为什么分离 PMF 要一直推到 30 Å，而不是看着平了就停。
+
+**The conformational restraints behave oppositely / 构象限制则恰恰相反.** The RMSD restraints enter as a difference, ΔG_RMSD = ΔG_c,bulk − ΔG_c,bound, and here both sides *are* computed by simulation. If a protein's internal conformational distribution were unchanged by binding, the two would cancel exactly and the term would vanish. **The residual is the conformational reorganization**, and the paper's selectivity result is precisely this term talking: wild-type BRD4 and BRD3 have similar ΔG_sep, yet the glutamate-containing (weakly binding) systems carry ΔG_RMSD of +3.1 and +7.3 kcal/mol while the glycine-containing ones sit near zero. There, the ranking is driven by reorganization, not by separation.
+
+**构象限制的行为正好相反。** RMSD 限制是以差值形式进入的，ΔG_RMSD = ΔG_c,bulk − ΔG_c,bound，而且两端都靠模拟算。如果一个蛋白的内部构象分布在结合前后没有变化，这两项就会精确抵消、整项归零。**残差就是构象重组的代价**，而论文的选择性结果恰恰是这一项在说话：野生型 BRD4 和 BRD3 的 ΔG_sep 相近，但含谷氨酸的弱结合体系 ΔG_RMSD 分别是 +3.1 和 +7.3 kcal/mol，含甘氨酸的则接近零。在那里，决定排序的是重组，而不是分离。
+
+| | Orientational (Boresch) / 取向 | Conformational (RMSD) / 构象 |
+|---|---|---|
+| Same potential at both ends? / 两端势函数相同? | Yes / 是 | Yes / 是 |
+| Do the two ends cancel? / 两端会抵消吗? | **No, by design** / **不，刻意不抵消** | **Nearly, by design** / **几乎抵消，刻意如此** |
+| Bound-state cost / 结合态代价 | Numerical US / 数值 US | Numerical US / 数值 US |
+| Free-state cost / 自由态代价 | **Analytic** / **解析** | Numerical US in bulk / 自由态数值 US |
+| What the difference means / 差值的物理含义 | Rotational entropy + standard state / 转动熵 + 标准态 | Conformational reorganization / 构象重组 |
+
 ---
 
 ## 4. The practical machinery / 具体是怎么干的
