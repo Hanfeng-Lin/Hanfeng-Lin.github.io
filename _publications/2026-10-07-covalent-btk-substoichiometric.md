@@ -8,13 +8,17 @@ excerpt: 'PSIRC3, an irreversible covalent BTK PROTAC, degrades BTK with a sub-n
 date: 2026-10-07
 venue: 'Nature Communications'
 paperurl: 'https://doi.org/10.1038/s41467-026-78239-9'
-citation: 'Cheng R, <b>Lin H</b>, Yu X, Misra S, Mitchell AD, Woyach JA, Qi X, Wang J. (2026). Sub-stoichiometric degradation is dispensable for potent PROTACs as demonstrated by irreversible covalent BTK degraders. <i>Nature Communications</i>, <b>17</b>, 11429.'
+citation: 'Cheng R<sup>†</sup>, <b>Lin H</b><sup>†</sup>, Yu X, Misra S, Mitchell AD, Woyach JA, Qi X, Wang J. (2026). Sub-stoichiometric degradation is dispensable for potent PROTACs as demonstrated by irreversible covalent BTK degraders. <i>Nature Communications</i>, <b>17</b>, 11429. (<sup>†</sup>These authors contributed equally)'
 tags:
   - PROTAC
   - Covalent Drug Design
   - Targeted Protein Degradation
   - BTK
 ---
+
+![SimBiology modeling of covalent and non-covalent PROTAC degradation. (A, B) Covalent and non-covalent degradation mechanism models, in which the target protein forms a ternary complex with the PROTAC and the E3 ligase before ubiquitination and degradation; the covalent model adds an irreversible k_inact step producing a permanent adduct. (C) Simulated 24 h degradation kinetics for the covalent PROTAC across a grid of warhead affinity and E3 ligase affinity values. (D-F) E3 ligase concentration study comparing the covalent model with non-covalent models carrying a weak or a strong warhead.](/publications/2026-covalent-btk-fig7.png)
+
+*Figure 7 of the paper, reproduced under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).*
 
 **Abstract**
 

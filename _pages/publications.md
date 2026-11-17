@@ -11,13 +11,25 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign featured = site.publications | where: "featured", true %}
-{% assign rest = site.publications | where_exp: "item", "item.featured != true" %}
+{% comment %}
+  Entries that carry a cover image are shown first, then the rest.
+  Both groups run newest first. An entry joins the top group simply by
+  containing an image, using the same detection as the thumbnail in
+  _includes/archive-single.html -- no front matter flag needed.
+{% endcomment %}
 
-{% for post in featured %}
-  {% include archive-single.html %}
+{% assign all_pubs = site.publications | sort: "date" | reverse %}
+
+{% for post in all_pubs %}
+  {% capture pub_html %}{{ post.excerpt | markdownify }}{{ post.content | markdownify }}{% endcapture %}
+  {% if pub_html contains '<img' %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}
 
-{% for post in rest reversed %}
-  {% include archive-single.html %}
+{% for post in all_pubs %}
+  {% capture pub_html %}{{ post.excerpt | markdownify }}{{ post.content | markdownify }}{% endcapture %}
+  {% unless pub_html contains '<img' %}
+    {% include archive-single.html %}
+  {% endunless %}
 {% endfor %}
