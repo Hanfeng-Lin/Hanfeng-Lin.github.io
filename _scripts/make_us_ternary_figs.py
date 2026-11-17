@@ -66,16 +66,22 @@ def fig1_path_problem():
     ax.text(3.6, 6.1, "glue", ha="center", va="center", fontsize=7,
             color="white", fontweight="bold", zorder=4)
 
-    rng = np.random.default_rng(3)
-    for ang in np.linspace(5, 80, 9):
-        th = np.deg2rad(ang)
-        L = 4.9 + rng.normal(0, 0.2)
-        x1, y1 = 3.9 + L * np.cos(th), 6.3 + L * np.sin(th) * 0.74
-        arrow(ax, (3.9, 6.3), (x1, y1), color=C_GREY, lw=1.0, alpha=0.75,
-              mutation=10)
-    protein(ax, (6.9, 9.0), 2.3, 1.7, C_TARGET, "target", angle=-18, alpha=0.5)
-    protein(ax, (8.5, 6.6), 2.3, 1.7, C_TARGET, "target", angle=25, alpha=0.5)
-    protein(ax, (8.6, 4.2), 2.2, 1.6, C_TARGET, "target", angle=5, alpha=0.3)
+    # the bound-state target, sitting on the glue-created interface
+    bound = (4.9, 6.9)
+    protein(ax, bound, 2.3, 1.7, C_TARGET, "target", angle=-10)
+    ax.text(bound[0], bound[1] - 1.25, "bound pose", ha="center", fontsize=8,
+            color=C_TARGET, fontweight="bold")
+
+    # each escape route ends in its own faded copy of the target
+    routes = [((6.6, 9.6), -22, 0.30), ((8.2, 7.6), 12, 0.38),
+              ((8.0, 4.9), 30, 0.30)]
+    for (pos, ang, al) in routes:
+        protein(ax, pos, 2.2, 1.6, C_TARGET, "target", angle=ang, alpha=al)
+    for (pos, _, _), rad in zip(routes, (0.32, 0.0, -0.3)):
+        a = FancyArrowPatch(bound, pos, arrowstyle="-|>", color=C_GREY,
+                            lw=1.4, mutation_scale=15, shrinkA=22, shrinkB=24,
+                            connectionstyle="arc3,rad=%.2f" % rad, zorder=4)
+        ax.add_patch(a)
     ax.text(5.0, 2.1,
             "slide / rock / rotate / peel\n"
             "orientation + conformation wander freely",

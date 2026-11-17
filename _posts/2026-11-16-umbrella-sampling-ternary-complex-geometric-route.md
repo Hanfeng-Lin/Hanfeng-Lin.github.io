@@ -49,8 +49,8 @@ Free energy is a **state function**, so an alchemical path is allowed to be arbi
 
 ![Figure 1 — The path-completeness problem and the geometric route's answer. Left: with only a separation coordinate controlled, the two proteins can slide, rock and rotate as they come apart, so the PMF reflects whichever tunnel the steered MD happened to carve. Right: RMSD restraints freeze each protein's conformation and Boresch restraints freeze their relative orientation, leaving the separation coordinate r as the only free CV — and every restraint's free energy is paid back later in the cycle.](/images/blog/us-ternary-geometric-route/fig1_path_completeness.png)
 
-1. **Under-sampling / 采样不足.** In each separation window the proteins have time to tumble and rearrange; converging over all of that is, in practice, never achieved.
-2. **Path dependence / 路径依赖.** The PMF depends on which tunnel your steered MD carved. A different pull gives a different number, with no internal way to tell which is right.
+1. **Under-sampling / 采样不足.** In each separation window the proteins have time to tumble and rearrange; converging over all of that is, in practice, never achieved. / 在每个分离窗口里，两个蛋白都有时间翻滚、重排；要把这些全部采样收敛，实际上做不到。
+2. **Path dependence / 路径依赖.** The PMF depends on which tunnel your steered MD carved. A different pull gives a different number, with no internal way to tell which is right. / PMF 取决于你的 steered MD 恰好挖出了哪条隧道。换一次拉伸就得到另一个数，而你没有任何内部判据能说明哪个才对。
 
 The geometric route's answer is almost cheeky in its simplicity: **do not let the orthogonal degrees of freedom move — restrain them, and then pay back the cost of every restraint exactly.**
 
